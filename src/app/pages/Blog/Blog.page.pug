@@ -1,0 +1,60 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Blog";
+
+block header
+	+CAppHeader(true)
+
+block body
+	.PBlog
+		section.PBlog-head
+			.container
+				h1 Milvus Blog
+				p Lorem ipsum dolor sit amet.
+				ul
+					li.u-active
+						a(href="#") All
+					li
+						a(href="#") Autonomous Mobile Robots
+					li
+						a(href="#") Company News
+					li
+						a(href="#") Health Tech
+					li
+						a(href="#") Industry 4.0
+
+
+
+		section.PBlog-Posts
+			.container
+				.row.gy-4
+					.col-lg-8
+						.PBlog-Posts__post.PBlog-Posts__post--first
+							.PBlog-Posts__post__img
+								a(href="#")
+									img(src=`https://picsum.photos/seed/a-0/1920/1200`, alt="alt")
+							.PBlog-Posts__post__body
+								.d-lg-flex
+									time MAY 05, 2021
+									.me-auto
+									strong Autonomous Mobile Robots
+								h3
+									a(href="#") 12 ways companies are automating workflows with mobile robots
+								p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+
+					- let n = 1;
+					while n <= 7
+						.col-lg-4
+							.PBlog-Posts__post
+								.PBlog-Posts__post__img
+									a(href="#")
+										img(src=`https://picsum.photos/seed/a-${n}/1920/1200`, alt="alt")
+								.PBlog-Posts__post__body
+									time MAY 05, 2021
+									h3
+										a(href="#") 12 ways companies are automating workflows with mobile robots
+									strong Autonomous Mobile Robots
+									p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+						- n++

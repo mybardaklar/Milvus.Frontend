@@ -1,0 +1,25 @@
+mixin CNavigationDrawer()
+	aside.CNavigationDrawer(
+		x-cloak,
+		x-data,
+		x-bind:class="{ 'CNavigationDrawer--active': $store.navigationDrawer.active }"
+	)
+		.CNavigationDrawer__backdrop
+		.CNavigationDrawer__wrapper(x-on:mousedown.outside="$store.navigationDrawer.deactivate()")
+			a.CNavigationDrawer__logo(href="/")
+				img(src=require("@assets/images/logo-dark.svg"), alt="Arslan Makina")
+
+			br
+
+			nav.CNavigationDrawer__nav
+				ul
+					li
+						a(href="/") Home
+					li
+						a(href="/") Solutions
+					li
+						a(href="/") Company
+					li
+						a(href="/") Resources
+					li
+						a(href="/") Contact Us

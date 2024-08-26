@@ -1,0 +1,245 @@
+@use "@styles/mixins/include-media.scss" as *;
+
+.CAppHeaderBlock {
+	height: 6.25rem;
+}
+
+.CAppHeader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	transition: all 400ms;
+
+	&--fixed {
+		background-color: #fff;
+		box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+
+		.CAppHeader__nav {
+			border: 1px solid rgba(#000, 0.08);
+		}
+	}
+	&--hidden {
+		transform: translateY(-6.25rem);
+		transition: all 400ms;
+	}
+
+	.container {
+		display: flex;
+		align-items: center;
+		height: 6.25rem;
+		position: relative;
+	}
+
+	&__logo {
+		display: inline-flex;
+		width: 12rem;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 2.5rem;
+		background-color: #fff;
+		overflow: hidden;
+		display: none;
+
+		@include media(">=lg") {
+			display: flex;
+		}
+
+		> ul {
+			display: flex;
+			align-items: center;
+
+			> li {
+				&:first-child {
+					> a {
+						padding-left: 2rem;
+					}
+				}
+				&:last-child {
+					> a {
+						padding-right: 2rem;
+					}
+				}
+
+				> a,
+				> span {
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					text-align: center;
+					height: 3rem;
+					color: rgba(#000, 0.8);
+					padding: 0 1rem;
+					transition: all 400ms;
+					position: relative;
+					cursor: pointer;
+					user-select: none;
+
+					&::after {
+						content: "";
+						display: block;
+						width: 100%;
+						height: 4px;
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						background-color: #9b6e2b;
+						opacity: 0;
+						transition: all 400ms;
+					}
+
+					&:hover {
+						&::after {
+							opacity: 1;
+						}
+					}
+
+					&.u-active {
+						&::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__end {
+		a {
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			background-color: #9b6e2b;
+			color: #fff;
+			font-weight: 700;
+			height: 3rem;
+			border-radius: 3rem;
+			padding: 0 1rem;
+			transition: all 400ms;
+
+			display: none;
+
+			@include media(">=lg") {
+				display: inline-flex;
+			}
+
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			width: 3rem;
+			height: 3rem;
+			padding: 0;
+			border: none;
+			background-color: #9b6e2b;
+			color: #fff;
+			border-radius: 3rem;
+
+			@include media(">=lg") {
+				display: none;
+			}
+		}
+	}
+
+	&__megamenu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-1rem);
+		transition: all 400ms;
+		padding-top: 1rem;
+		display: none;
+
+		@include media(">=lg") {
+			display: flex;
+		}
+
+		&--active {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: auto;
+			transform: translateY(-1.6rem);
+		}
+
+		&__wrapper {
+			background-color: #fff;
+			padding: 2.25rem;
+			border-radius: 2.25rem;
+			box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+			border: 1px solid rgba(#000, 0.08);
+		}
+
+		h6 {
+			font-size: 0.75rem;
+			font-weight: 500;
+			color: #9b6e2b;
+			text-transform: uppercase;
+			letter-spacing: 0.25rem;
+			margin-bottom: 0.75rem;
+		}
+
+		.PHome-Solutions__solution {
+			border-right: 1px solid #ebebeb;
+			border-radius: 0;
+			transition: all 400ms;
+
+			strong,
+			p {
+				font-size: 0.75rem;
+				display: block;
+			}
+
+			&:hover {
+				background-color: rgba(#000, 0.08);
+			}
+		}
+
+		&__links {
+			margin: 0 -1rem;
+
+			a {
+				display: flex;
+				align-items: flex-start;
+				padding: 1rem;
+				transition: all 400ms;
+				border-radius: 1.25rem;
+
+				&:hover {
+					background-color: rgba(#000, 0.08);
+				}
+
+				strong {
+					font-size: 0.875rem;
+					font-weight: 500;
+					color: #333333;
+				}
+
+				p {
+					font-size: 0.75rem;
+					font-family: var(--aa-font-sans-2);
+					color: #565656;
+				}
+			}
+		}
+	}
+}

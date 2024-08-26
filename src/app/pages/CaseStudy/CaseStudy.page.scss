@@ -1,0 +1,128 @@
+.PCaseStudy {
+	background-color: #000000;
+	padding-top: 6.25rem;
+
+	&__wrapper {
+		background-image: url("@assets/images/blog_bg.png");
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: cover auto;
+		padding: 6rem 0;
+		margin-bottom: -2.25rem;
+		padding-bottom: 8.25rem;
+	}
+}
+
+.PCaseStudy-Head {
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+	}
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 500;
+		color: #9b6e2b;
+	}
+
+	p {
+		font-size: 1.25rem;
+		font-family: var(--aa-font-sans-2);
+		color: #fff;
+		opacity: 0.8;
+	}
+}
+
+.PCaseStudy-Posts {
+	margin-top: 6rem;
+
+	&__post {
+		position: relative;
+		background-color: #323232;
+		border-radius: 3rem;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		&__img {
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+
+			a {
+				display: flex;
+				flex-direction: column;
+			}
+
+			img {
+				width: 100%;
+				height: 20rem;
+				object-fit: cover;
+			}
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+			padding: 2rem;
+			flex-grow: 1;
+			position: relative;
+
+			i {
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: #9b6e2b;
+				font-style: normal;
+			}
+
+			h3 {
+				color: #fff;
+				font-size: 1.5rem;
+				font-weight: 500;
+				margin-top: 0.5rem;
+			}
+
+			strong {
+				display: block;
+				font-size: 0.875rem;
+				font-weight: 500;
+				color: #6d6e70;
+			}
+
+			p {
+				color: #fff;
+				opacity: 0.64;
+				font-family: var(--aa-font-sans-2);
+				margin-top: 0.5rem;
+			}
+		}
+
+		&--first {
+			padding: 0;
+
+			.PCaseStudy-Posts__post__img {
+				flex-grow: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+
+			.PCaseStudy-Posts__post__body {
+				background-color: rgba(#000, 0.6);
+				flex-grow: 1;
+			}
+		}
+	}
+}

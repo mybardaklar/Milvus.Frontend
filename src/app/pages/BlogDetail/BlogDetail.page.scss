@@ -1,0 +1,142 @@
+.PBlogDetail-Hero {
+	position: relative;
+	border-radius: 3rem;
+	overflow: hidden;
+	margin-bottom: 6rem;
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		justify-content: center;
+		text-align: center;
+		position: relative;
+		background-color: rgba(#000, 0.4);
+		padding: 6rem 0 6rem;
+
+		time {
+			font-size: 1.25rem;
+			font-weight: 500;
+			text-transform: uppercase;
+			color: #fff;
+		}
+
+		h1 {
+			font-size: 2.5rem;
+			font-weight: 500;
+			color: #fff;
+			max-width: 46.25rem;
+			margin: 0 auto;
+		}
+
+		h6 {
+			font-family: var(--aa-font-sans-2);
+			font-size: 1.25rem;
+			color: #fff;
+			opacity: 0.8;
+		}
+	}
+}
+
+.PBlogDetail-Main {
+	border-radius: 2.5rem;
+	background-color: #fff;
+	padding: 6rem 0;
+}
+
+.PBlogDetail-Sidebar {
+	position: relative;
+	min-height: 100%;
+
+	&::after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-image: linear-gradient(
+			to bottom,
+			#fff 0%,
+			#666666 12%,
+			#666666 87%,
+			#ffffff 100%
+		);
+	}
+
+	h2 {
+		font-size: 1rem;
+		font-weight: 700;
+		color: #282828;
+		padding: 0.5rem 1rem;
+	}
+
+	ul {
+		li {
+			a {
+				display: block;
+				border-left: 3px solid #fff;
+				font-family: var(--aa-font-sans-2);
+				color: #282828;
+				padding: 0.5rem 1rem;
+			}
+
+			&.u-active {
+				a {
+					border-left-color: #9b6e2b;
+					color: #9b6e2b;
+				}
+			}
+		}
+	}
+}
+
+.PBlogDetail-Content {
+	font-size: 1.125rem;
+	font-family: var(--aa-font-sans-2);
+	color: #282828;
+
+	p,
+	ul,
+	h3 {
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		list-style-type: disc;
+		list-style-position: inside;
+		padding-left: 0.25rem;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+}
+
+.PBlogDetail-Related {
+	margin: 6rem 0;
+
+	h4 {
+		font-size: 2rem;
+		font-weight: 500;
+		color: #000;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+}

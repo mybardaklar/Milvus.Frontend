@@ -1,0 +1,102 @@
+@use "@styles/mixins/include-media.scss" as *;
+
+@use "@components/AppHeader/AppHeader.component.scss";
+@use "@components/AppFooter/AppFooter.component.scss";
+@use "@components/NavigationDrawer/NavigationDrawer.component.scss";
+
+@use "@pages/Index/Index.page.scss";
+@use "@pages/ProductDetail/ProductDetail.page.scss";
+@use "@pages/Blog/Blog.page.scss";
+@use "@pages/BlogDetail/BlogDetail.page.scss";
+@use "@pages/CaseStudy/CaseStudy.page.scss";
+@use "@pages/CaseStudyDetail/CaseStudyDetail.page.scss";
+@use "@pages/Contact/Contact.page.scss";
+
+.CGridBlock {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2.25rem;
+	overflow: hidden;
+	background-color: #fff;
+	min-height: 100%;
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		position: relative;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: #000;
+		background-image: linear-gradient(to right, rgba(#fff, 0.8), transparent);
+
+		@include media(">=lg") {
+			background-image: none;
+		}
+
+		h4 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-family: var(--aa-font-sans-2);
+			font-size: 0.875rem;
+			max-width: 16rem;
+			opacity: 0.64;
+		}
+
+		> svg {
+			color: #9b6e2b;
+			margin-top: 2rem;
+		}
+
+		a.a-button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			gap: 2rem;
+			background-color: #fff;
+			height: 3.25rem;
+			padding: 0 1.5rem;
+			border-radius: 3.25rem;
+			font-family: var(--aa-font-sans-2);
+			font-weight: 600;
+			color: #000;
+			transition: all 400ms;
+			align-self: flex-start;
+
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+
+	&--light {
+		.CGridBlock__body {
+			color: #fff;
+			background-image: linear-gradient(to right, rgba(#000, 0.8), transparent);
+
+			@include media(">=lg") {
+				background-image: none;
+			}
+		}
+	}
+
+	&--transparent {
+		background-color: transparent;
+	}
+}

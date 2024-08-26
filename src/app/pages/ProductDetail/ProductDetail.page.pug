@@ -1,0 +1,313 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Product Detail";
+
+block body
+	section.PProductDetail-Hero
+		.PProductDetail-Hero__img
+			img(src="https://picsum.photos/seed/a/1920/1080", alt="alt")
+		.PProductDetail-Hero__body
+			.container
+				img(src=require("@assets/images/productdetail_logo.png"), alt="alt")
+				h1 Mid-Size Master,<br>Maximizes Workflow Efficiency
+
+
+
+	section.PProductDetail-Detail
+		.container
+			.PProductDetail-Detail__about
+				p Revolutionize your material handling tasks with our comprehensive suite of autonomous mobile robots (AMRs). Capable of safely maneuvering and transporting payloads up to 2000 kg, our AMRs are offered with a range of attachments to suit various application needs. Opt for AMRs to significantly cut costs and enhance operational efficiency.
+				hr
+				ul
+					li
+						span Payload
+						strong 500 kg
+					li
+						span Working hour
+						strong 000 hours
+					li
+						span Max. speed
+						strong 1.5 m/s
+					li
+						span Dimensions
+						strong 00x00x00 cm
+
+			.PProductDetail-Detail__navbar
+				.row.gy-4.align-items-center
+					.col-lg-3
+						.PProductDetail-Detail__dropdown
+							.PProductDetail-Detail__dropdown__selected
+								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/></svg>
+							.PProductDetail-Detail__dropdown__options
+								a(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+								a.u-active(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+								a(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+
+					.col-lg-6
+						nav.PProductDetail-Detail__nav
+							ul
+								li.u-active
+									a(href="#") Overview
+								li
+									a(href="#") Fleet Management
+								li
+									a(href="#") Attachments
+								li
+									a(href="#") Safety
+								li
+									a(href="#") Datasheet
+
+					.col-lg-3.d-none.d-lg-block.text-lg-end
+						.PProductDetail-Detail__contact
+							a(href="#") Contact Us
+
+
+
+
+	section.PProductDetail-Features
+		.container
+			.row.gy-4
+				.col-lg-8
+					.CGridBlock
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_1.png"), alt="alt")
+						.CGridBlock__body
+							h4 Feature 1
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--light
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_2.png"), alt="alt")
+						.CGridBlock__body
+							h4 Feature 2
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 1
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--transparent
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_3.png"), alt="alt")
+						.CGridBlock__body
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 2
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 3
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-8
+					.CGridBlock.CGridBlock--light
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_4.png"), alt="alt")
+						.CGridBlock__body
+							h4 Tech Specs
+							p Discover all the features and capabilities of this product.
+							br
+							a.a-button(href="#") Download
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+
+
+
+	section.PHome-Monitor
+		.container
+			.PHome-Monitor__head
+				h4 Milvus Fleet Manager
+
+			.row.align-items-center.gy-5.flex-lg-row-reverse
+				.col-lg-6.col-xl-7
+					.PHome-Monitor__img
+						img(src=require("@assets/images/home_monitor.png"), alt="alt")
+				.col-lg-6.col-xl-5
+					.PHome-Monitor__content
+						h3 Effortlessly manage and monitor your fleet anytime, anywhere.
+						a.a-button(href="#") Discover
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+						p Maximize efficiency and control over your robotic fleet with Milvus Fleet Manager, the leading solution for modern fleet management. Accessible from anywhere, this powerful system offers comprehensive tools for optimizing performance and coordinating your robots effortlessly. Elevate your operations with unmatched oversight and convenience.
+
+
+
+
+	section.PProductDetail-Attachments
+		.PProductDetail-Attachments__head
+			.container
+				.row.gy-5.align-items-end
+					.col-lg-8
+						.PProductDetail-Attachments__head__start
+							h4 Attachments
+							h3 Expand your capabilities with SEIT attachments
+							p We offer a range of attachments and accessories designed specifically for compatibility with SEIT robots. To learn more about integrating mobile manipulators, conveyor systems, shelving, and other custom solutions, contact us directly. We are always glad to discuss custom attachments and accessories.
+					.col-lg-4.text-lg-end
+						.PProductDetail-Attachments__head__end
+							button(id="PProductDetail-Attachments__Slider__PrevButton")
+								<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.499 6.497L3.5 10.499l4 4.001m9-4h-13"/></svg>
+							button(id="PProductDetail-Attachments__Slider__NextButton")
+								<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m13.5 6.497l4 4.002l-4 4.001m-9-4h13"/></svg>
+
+		.PProductDetail-Attachments__slider
+			.container(
+				x-data="{ spacingLevel: 0 }",
+				x-init="window.innerWidth >= 992 ? $nextTick(() => { spacingLevel = getComputedStyle($el).marginLeft }) : spacingLevel = 0",
+				x-on:resize.window="window.innerWidth >= 992 ? spacingLevel = getComputedStyle($el).marginLeft : spacingLevel = 0"
+			)
+				div(x-bind:style="{ marginRight: `-${parseFloat(spacingLevel)}px` }")
+					.swiper(id="PProductDetail-Attachments__Slider")
+						.swiper-wrapper
+							.swiper-slide
+								.PProductDetail-Attachments__slider__slide
+									img(src="https://picsum.photos/seed/a-0/1920/1080", alt="alt")
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							.swiper-slide
+								.PProductDetail-Attachments__slider__slide
+									img(src="https://picsum.photos/seed/a-1/1920/1080", alt="alt")
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							.swiper-slide
+								.PProductDetail-Attachments__slider__slide
+									img(src="https://picsum.photos/seed/a-2/1920/1080", alt="alt")
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							.swiper-slide
+								.PProductDetail-Attachments__slider__slide
+									img(src="https://picsum.photos/seed/a-3/1920/1080", alt="alt")
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							.swiper-slide
+								.PProductDetail-Attachments__slider__slide
+									img(src="https://picsum.photos/seed/a-4/1920/1080", alt="alt")
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+		.container
+			.PProductDetail-Attachments__banner
+				.row.gy-4
+					.col-sm-8
+						h4 Are you looking for attachments tailored to your needs?
+						p Pellentesque et tincidunt velit. Vestibulum ante ipsum primis in faucibus orci luctus.
+					.col-sm-4.text-sm-end
+						a.a-button(href="#") Contact Us
+
+
+
+
+	section.PProductDetail-Safety
+		.container
+			.PProductDetail-Safety__head
+				h4 Safety
+				h3 Advanced Safety with Next-Gen AMRs
+
+			.PProductDetail-Safety__body
+				.row.gy-4
+					.col-lg-6
+						img(src="https://picsum.photos/seed/a-4/1920/1080", alt="alt")
+					.col-lg-6
+						.PProductDetail-Safety__accordion(
+							x-data="{ show: true }",
+							x-bind:class="{ 'PProductDetail-Safety__accordion--active': show }"
+						)
+							.PProductDetail-Safety__accordion__head(x-on:click="show = !show")
+								strong Consectetur
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+							.PProductDetail-Safety__accordion__body
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel.
+
+						.PProductDetail-Safety__accordion(
+							x-data="{ show: false }",
+							x-bind:class="{ 'PProductDetail-Safety__accordion--active': show }"
+						)
+							.PProductDetail-Safety__accordion__head(x-on:click="show = !show")
+								strong Vestibulum
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+							.PProductDetail-Safety__accordion__body
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel.
+
+						.PProductDetail-Safety__accordion(
+							x-data="{ show: false }",
+							x-bind:class="{ 'PProductDetail-Safety__accordion--active': show }"
+						)
+							.PProductDetail-Safety__accordion__head(x-on:click="show = !show")
+								strong Nullam Tempus
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+							.PProductDetail-Safety__accordion__body
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel.
+
+
+
+
+	section.PProductDetail-Explore
+		.container
+			h3 Explore the rest of the fleet
+			.row.gy-4.mt-3
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance

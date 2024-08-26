@@ -1,0 +1,40 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Case Study";
+
+block body
+	.PCaseStudy
+		.PCaseStudy__wrapper
+			section.PCaseStudy-Head
+				.container
+					h1 Case Studies
+					p Lorem ipsum dolor sit amet.
+
+			section.PCaseStudy-Posts
+				.container
+					.row.gy-4
+						.col-lg-8
+							.PCaseStudy-Posts__post.PCaseStudy-Posts__post--first
+								.PCaseStudy-Posts__post__img
+									img(src=`https://picsum.photos/seed/a-9/1920/1200`, alt="alt")
+								.PCaseStudy-Posts__post__body
+									i UNILEVER
+									h3
+										a(href="#") 12 ways companies are automating workflows with mobile robots
+									p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+
+						- let n = 1;
+						while n <= 4
+							.col-lg-4
+								.PCaseStudy-Posts__post
+									.PCaseStudy-Posts__post__img
+										a(href="#")
+											img(src=`https://picsum.photos/seed/a-${n}/1920/1200`, alt="alt")
+									.PCaseStudy-Posts__post__body
+										i COMPANY NAME
+										h3
+											a(href="#") 12 ways companies are automating workflows with mobile robots
+										p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+							- n++

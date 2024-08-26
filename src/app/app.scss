@@ -1,0 +1,93 @@
+@use "@styles/mixins/include-media.scss" as *;
+@use "@styles/fonts/NuberNext.font.scss";
+@use "@layouts/Default/Default.layout.scss";
+
+:root {
+	--color-case-bg: 245 245 245;
+	--aa-font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+		"Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+	--aa-font-sans-2: "NuberNext", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+		"Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #f5f5f5;
+	color: #565656;
+	font-family: var(--aa-font-sans);
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+
+	@include media("<lg") {
+		font-size: 14px;
+	}
+}
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ol,
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+	display: block;
+	vertical-align: middle;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+[x-cloak] {
+	display: none !important;
+}

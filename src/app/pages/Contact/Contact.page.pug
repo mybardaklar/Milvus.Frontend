@@ -1,0 +1,92 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Contact Us";
+
+block header
+	+CAppHeader(true)
+
+block footer
+	+CAppFooter(false)
+
+block body
+	.PContact
+		section.PContact-Head
+			.container
+				h1 Lorem ipsum dolor sit amet
+
+		.container
+			.row.gy-4
+				.col-lg-4
+					.PContact-Block
+						.PContact-Block__head
+							h4 Mail us
+							.me-auto
+							img(src=require("@assets/images/contact_envelope.png"), alt="alt")
+						.PContact-Block__body
+							.d-flex.flex-column.gap-2
+								.PContact-Block__info
+									strong General Inquires
+									span info@milvusrobotics.com
+								.PContact-Block__info
+									strong Sales
+									span sales@milvusrobotics.com
+								.PContact-Block__info
+									strong Human Resources
+									span hr@milvusrobotics.com
+					br
+					.PContact-Block
+						.PContact-Block__head
+							h4 Call us
+							.me-auto
+							img(src=require("@assets/images/contact_phone.png"), alt="alt")
+						.PContact-Block__body
+							.d-flex.flex-column.gap-2
+								.PContact-Block__info
+									strong +1 678 972 1201
+								.PContact-Block__info
+									strong +90 312 227 0235
+
+				.col-lg-8
+					.PContact-Block
+						.PContact-Block__head
+							h4 Get in touch
+						.PContact-Block__body
+							form.PContact-Form
+								label.PContact-Form__item
+									strong Name/Surname
+									input(type="text")
+								label.PContact-Form__item
+									strong Company Name
+									input(type="text")
+								label.PContact-Form__item
+									strong E-mail
+									input(type="email")
+								label.PContact-Form__item
+									strong How can we help?
+									textarea(rows="5", placeholder="Your notes, questions, etc.")
+								.PContact-Form__item
+									button(type="submit") Send Message
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+
+
+
+	section.PContact-Map
+		.container
+			h3 Global Offices and Facilities
+			img(src=require("@assets/images/contact_map.png"), alt="alt")
+			.row.gy-4.mt-2
+				.col-lg-4
+					.PContact-Map__item
+						strong US
+						p 3800 Camp Creek Pkwy SW<br>Bldg 1400-116 #1063<br>Atlanta, Georgia 30331
+				.col-lg-4
+					.PContact-Map__item
+						strong US
+						p Yeni Bağlıca Mah. Türkeli Cad.<br>No:11/1 06790 Etimesgut<br>Ankara / Turkey
+				.col-lg-4
+					.PContact-Map__item
+						strong US
+						p ODTU Teknokent MET B Blok<br>No:280/15 06520<br>Ankara / Turkey
