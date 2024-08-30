@@ -25,8 +25,8 @@
 		color: #fff;
 		text-align: center;
 		min-height: 100svh;
-		padding: 6rem 0;
-		margin-top: 6.25rem;
+		padding: 12.25rem 0 6rem;
+		background-image: linear-gradient(to bottom, rgba(#000, 0.4), transparent);
 
 		h1 {
 			font-size: 3.75rem;
@@ -123,12 +123,24 @@
 
 		&__img {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: center;
 			text-align: center;
+			min-height: 120px;
+
+			img {
+				max-width: 100%;
+			}
 		}
 
 		&__brand {
+			display: inline-flex;
+			max-width: 120px;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		strong,
@@ -187,6 +199,12 @@
 			font-size: 2.5rem;
 			color: #fff;
 			font-weight: 500;
+		}
+
+		h5 {
+			font-size: 1.5rem;
+			font-weight: 500;
+			color: #fff;
 		}
 
 		a.a-button {
@@ -310,8 +328,15 @@
 			color: #000;
 		}
 
-		img {
-			display: inline-block;
+		&__imgs {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-top: 2rem;
+
+			img {
+				height: 6rem;
+			}
 		}
 	}
 }

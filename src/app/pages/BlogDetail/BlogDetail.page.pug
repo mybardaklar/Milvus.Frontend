@@ -11,7 +11,7 @@ block body
 	.container
 		section.PBlogDetail-Hero
 			.PBlogDetail-Hero__img
-				img(src="https://picsum.photos/seed/a-5/1920/1080", alt="alt")
+				img(src=require("@assets/images/blogdetail_hero.jpg"), alt="alt")
 			.PBlogDetail-Hero__body
 				time MAY 05, 2021
 				h1 12 ways companies are automating workflows with mobile robots
@@ -22,24 +22,25 @@ block body
 			.row.gy-4
 				.col-lg-4
 					aside.PBlogDetail-Sidebar
-						h2 12 ways companies are automating workflows with mobile robots
-						ul
-							li.u-active
-								a(href="#") Navigation Software
-							li
-								a(href="#") Fleet and Traffic Management
-							li
-								a(href="#") Safety
-							li
-								a(href="#") User Interface and Mission Planning
-							li
-								a(href="#") Attachments
-							li
-								a(href="#") Support
-							li
-								a(href="#") Tips for Choosing an AMR Provider
-							li
-								a(href="#") The Milvus Robotics Difference
+						.PBlogDetail-Sidebar__wrapper
+							h2 12 ways companies are automating workflows with mobile robots
+							ul
+								li(data-title="PBlogDetail-NavigationSoftware")
+									a(href="#PBlogDetail-NavigationSoftware") Navigation Software
+								li(data-title="PBlogDetail-FleetAndTrafficManagement")
+									a(href="#PBlogDetail-FleetAndTrafficManagement") Fleet and Traffic Management
+								li(data-title="PBlogDetail-Safety")
+									a(href="#PBlogDetail-Safety") Safety
+								li(data-title="PBlogDetail-UserInterfaceAndMissionPlanning")
+									a(href="#PBlogDetail-UserInterfaceAndMissionPlanning") User Interface and Mission Planning
+								li(data-title="PBlogDetail-Attachments")
+									a(href="#PBlogDetail-Attachments") Attachments
+								li
+									a(href="#") Support
+								li
+									a(href="#") Tips for Choosing an AMR Provider
+								li
+									a(href="#") The Milvus Robotics Difference
 
 				.col-lg-8
 					.PBlogDetail-Content
@@ -55,13 +56,35 @@ block body
 							li Support
 						p It’s important to understand the differences, advantages, and disadvantages of choosing one type of AMR over another. To learn more about what sets Milvus Robotics apart from the competition as an AMR provider, keep reading.
 
-						h3 Navigation Software
-						p A few decades ago, it was challenging to develop a robot that could move autonomously. Now, it’s a much simpler task to create a robot that can move itself from one point to another. While it’s possible to build an AMR using general-purpose methods and applications, the result won’t be the same. A robust, special-purpose, industrial-grade autonomous machine can’t be developed with generic methods.
-						p At Milvus, our proficient software and AI teams allow us to develop dedicated navigation algorithms and software. Our navigation software is tested 24/7 for several weeks before ever rolling out onto a factory floor. Our AMRs have nearly unlimited capabilities thanks to our in-house software. We can extend, customize, and develop software to meet your exact requirements.
+						div#PBlogDetail-NavigationSoftware(data-title="PBlogDetail-NavigationSoftware")
+							h3 Navigation Software
+							p A few decades ago, it was challenging to develop a robot that could move autonomously. Now, it’s a much simpler task to create a robot that can move itself from one point to another. While it’s possible to build an AMR using general-purpose methods and applications, the result won’t be the same. A robust, special-purpose, industrial-grade autonomous machine can’t be developed with generic methods.
+							p At Milvus, our proficient software and AI teams allow us to develop dedicated navigation algorithms and software. Our navigation software is tested 24/7 for several weeks before ever rolling out onto a factory floor. Our AMRs have nearly unlimited capabilities thanks to our in-house software. We can extend, customize, and develop software to meet your exact requirements.
 
-						h3 Fleet and Traffic Management
-						p You may have to scale up your AMR fleet as your company grows and changes over time. Making multiple robots work in harmony is a challenging problem, and many AMR providers cannot provide this feature. If you use AMRs without fleet and traffic management capabilities, it will be very difficult to add a new robot to the workflow. It will be more costly and less efficient – much like purchasing a train locomotive each time you need a new wagon!
-						p At Milvus, we have our own Fleet Management System which constantly monitors and controls all robots in the fleet. Adding a new robot is simple and only takes a few clicks in the user interface. Once a new robot is added to the fleet, all the AMRs will welcome their new colleague and work side by side autonomously at maximum efficiency. Traffic will be monitored by the Traffic Management System, which can prioritize important tasks while eliminating the possibility of traffic jams and inefficient routes.
+						div#PBlogDetail-FleetAndTrafficManagement(data-title="PBlogDetail-FleetAndTrafficManagement")
+							h3 Fleet and Traffic Management
+							p You may have to scale up your AMR fleet as your company grows and changes over time. Making multiple robots work in harmony is a challenging problem, and many AMR providers cannot provide this feature. If you use AMRs without fleet and traffic management capabilities, it will be very difficult to add a new robot to the workflow. It will be more costly and less efficient – much like purchasing a train locomotive each time you need a new wagon!
+							p At Milvus, we have our own Fleet Management System which constantly monitors and controls all robots in the fleet. Adding a new robot is simple and only takes a few clicks in the user interface. Once a new robot is added to the fleet, all the AMRs will welcome their new colleague and work side by side autonomously at maximum efficiency. Traffic will be monitored by the Traffic Management System, which can prioritize important tasks while eliminating the possibility of traffic jams and inefficient routes.
+
+						div#PBlogDetail-Safety(data-title="PBlogDetail-Safety")
+							h3 Safety
+							p There’s no excuse for a lack of safety measures in the workplace. AMRs should always be designed with multiple levels of safety features to prevent injury to humans as well as damage to goods, vehicles, or other robots. Unfortunately, not all AMRs from other companies are designed with a safety-first mentality.
+							p In SEIT robots, we’ve implemented multiple safety systems at different levels of action. These include safety laser scanners with a performance level PL d with structure category 3 as described in EN ISO 13849 together with PL e category 4 safety PLC which prevents any collision under any condition or failure. The safety system includes multiple 3D depth cameras, which brings additional safety over laser scanners.
+							p More than that, SEIT robots include an audio-visual indication system which warns humans of risks and possible threats. SEIT robots comply with EU directive 2006/42/EC, ISO 12100-1&2, ISO 13849, ISO 3691-4, ANSI B56.5, EN 60204-1 and IEC 61000-6-2&4. With help of these features, SEIT AMRs operate safely without causing any harm or downtime.
+
+						div#PBlogDetail-UserInterfaceAndMissionPlanning(data-title="PBlogDetail-UserInterfaceAndMissionPlanning")
+							h3 User Interface and Mission Planning
+							p With different attachment options, it is easy to integrate SEIT AMRs into existing facilities for a variety of material handling and transfer needs. For example, one application may require transfer using a conveyor, while another may require a lift. Not all AMRs are designed to support multiple different attachments, which leads to limited capabilities and less efficiency.
+							p At Milvus, we offer a variety of attachment options designed for seamless integration with SEIT robots. SEIT robots are built to be extended easily and each has its own electrical and mechanical connection interfaces. We also provide support for attachments as we do for our robots.
+
+						div#PBlogDetail-Attachments(data-title="PBlogDetail-Attachments")
+							h3 Attachments
+							p A powerful, user-friendly interface is incredibly important to ensure that you get the most out of your AMRs. The user interface should allow you to configure and monitor operations with ease.
+							p Milvus Fleet Manager is easy to use and provides very flexible configuration tools. It can display locations and status of all robots on one screen and operators can intervene from the same screen if necessary. SEIT robots can wait for a time, for a button press, or for a signal from external devices to act. Milvus Fleet Manager also allows different user levels with different privileges, flexible drag-and-drop mission planning, and many other tools to help you achieve the ideal workflow for efficient operations.
+
+						h3 Integration
+						p When adding a new AMR to your facility, always ensure that it can be integrated with your enterprise resource planning (ERP) and warehouse management systems (WMS). When an AMR is not fully integrated, material flow will be interrupted. For example, an operator may read a barcode on a material using a hand terminal, and AMR's task management system can trigger a transfer job with correct source and destination stations. Without full integration, this operation would not be fully automated and you would risk material outage, latencies, and other problems.
+						p SEIT AMR systems provide a powerful and secure application programming interface (API) which makes it a straightforward task to integrate with WMS and ERP systems. We will work with you to ensure seamless integration with your facility.
 
 
 

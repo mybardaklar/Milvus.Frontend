@@ -3,9 +3,6 @@ mixin CAppHeader(static = false)
 		.CAppHeaderBlock
 	header.CAppHeader(
 		x-data="CAppHeader"
-		x-bind="CAppHeaderBinding",
-		@scroll.window="CAppHeaderScrollFunction",
-		@wheel.window="CAppHeaderWheelFunction"
 	)
 		.container
 			a.CAppHeader__logo(href="/")
@@ -15,11 +12,9 @@ mixin CAppHeader(static = false)
 						alt="alt",
 					)
 				else
-					- const darkLogo = require("@assets/images/logo-dark.svg")
 					img(
 						src=require("@assets/images/logo.svg"),
 						alt="alt",
-						:src=`headerFixed ? "${require("@assets/images/logo-dark.svg")}" : "${require("@assets/images/logo.svg")}"`
 					)
 
 			.me-auto
@@ -55,39 +50,39 @@ mixin CAppHeader(static = false)
 								.col-sm-3.col-xl-3
 									a.PHome-Solutions__solution(href="#1")
 										.PHome-Solutions__solution__img
-											img(src=require("@assets/images/solution_1.png"), alt="alt")
+											img(src=require("@assets/images/header_product_1.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
-											img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+											img(src=require("@assets/images/home_solutions_brands_1.png"), alt="alt")
 										div
 											strong Light and Nimble
 											p Unleashes Powerful Performance
 								.col-sm-3.col-xl-3
 									a.PHome-Solutions__solution(href="#2")
 										.PHome-Solutions__solution__img
-											img(src=require("@assets/images/solution_1.png"), alt="alt")
+											img(src=require("@assets/images/header_product_2.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
-											img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+											img(src=require("@assets/images/home_solutions_brands_2.png"), alt="alt")
 										div
-											strong Light and Nimble
-											p Unleashes Powerful Performance
+											strong Agility Meets Power
+											p Navigates Tightest Corners
 								.col-sm-3.col-xl-3
 									a.PHome-Solutions__solution(href="#3")
 										.PHome-Solutions__solution__img
-											img(src=require("@assets/images/solution_1.png"), alt="alt")
+											img(src=require("@assets/images/header_product_3.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
-											img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+											img(src=require("@assets/images/home_solutions_brands_3.png"), alt="alt")
 										div
-											strong Light and Nimble
-											p Unleashes Powerful Performance
+											strong Mid-Size Master
+											p Maximizes Workflow Efficiency
 								.col-sm-3.col-xl-3
 									a.PHome-Solutions__solution(href="#4")
 										.PHome-Solutions__solution__img
-											img(src=require("@assets/images/solution_1.png"), alt="alt")
+											img(src=require("@assets/images/header_product_4.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
-											img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+											img(src=require("@assets/images/home_solutions_brands_4.png"), alt="alt")
 										div
-											strong Light and Nimble
-											p Unleashes Powerful Performance
+											strong Built for the Toughest
+											p Delivering Unwavering Power
 						.col-lg-4
 							h6 More
 							.CAppHeader__megamenu__links

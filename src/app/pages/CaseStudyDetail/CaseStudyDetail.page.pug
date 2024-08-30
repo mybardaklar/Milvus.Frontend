@@ -12,7 +12,7 @@ block body
 		section.PCaseStudyDetail-Hero
 			.row.gy-4.flex-lg-row-reverse
 				.col-lg-6
-					img(src="https://picsum.photos/seed/a/1920/1080", alt="alt")
+					img(src=require("@assets/images/blog_1.jpg"), alt="alt")
 				.col-lg-6
 					.PCaseStudyDetail-Hero__body
 						h2 UNILEVER
@@ -52,7 +52,7 @@ block body
 						.swiper(id="PCaseStudyDetail-Challanges__Slider")
 							.swiper-wrapper
 								.swiper-slide
-									img(src="https://picsum.photos/seed/a/1080/1200", alt="alt")
+									img(src=require("@assets/images/casestudydetail_challange.jpg"), alt="alt")
 								.swiper-slide
 									img(src="https://picsum.photos/seed/b/1080/1200", alt="alt")
 								.swiper-slide
@@ -78,7 +78,8 @@ block body
 
 			.row.gy-4.flex-lg-row-reverse
 				.col-lg-6
-					img(src="https://picsum.photos/seed/d/1080/1080", alt="alt")
+					.PCaseStudyDetail-Solution__img
+						img(src=require("@assets/images/casestudydetail_solution.jpg"), alt="alt")
 				.col-lg-6
 					.d-flex.flex-column.gap-5
 						h3 Lorem ipsum dolor sit amet
@@ -106,8 +107,10 @@ block body
 	section.PCaseStudyDetail-Roots
 		.container
 			.PCaseStudyDetail-Roots__head
-				h3 Customizing the Roots
-				p Milvus robots are designed with safety in mind. With optimized footprints, they can navigate around narrow spaces. They charge themselves automatically so that nonstop operation is guaranteed. Their cutting-edge safety sensors are comprised of lidar and depth cameras, offering control on both horizontal and vertical planes, and they are equipped with electromechanical brakes for instant action and the ability to stop abruptly at any moment. Four different robots and attachments for four different material handling types were developed and deployed.
+				.row
+					.col-lg-8
+						h3 Customizing the Roots
+						p Milvus robots are designed with safety in mind. With optimized footprints, they can navigate around narrow spaces. They charge themselves automatically so that nonstop operation is guaranteed. Their cutting-edge safety sensors are comprised of lidar and depth cameras, offering control on both horizontal and vertical planes, and they are equipped with electromechanical brakes for instant action and the ability to stop abruptly at any moment. Four different robots and attachments for four different material handling types were developed and deployed.
 				.PCaseStudyDetail-Roots__head__buttons
 					button(id="PCaseStudyDetail-Roots__Slider__PrevButton")
 						<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M7.499 6.497L3.5 10.499l4 4.001m9-4h-13"/></svg>
@@ -125,28 +128,28 @@ block body
 						.swiper-wrapper
 							.swiper-slide
 								.PCaseStudyDetail-Roots__slider__slide
-									img(src="https://picsum.photos/seed/d-0/1920/1080", alt="alt")
-									h4 SEIT500 with Pallet Lift Attachment
+									img(src=require("@assets/images/casestudydetail_roots_1.jpg"), alt="alt")
+									h4 SEIT500 with Pallet Lift Attachment
 									p The SEIT500 with pallet lift attachment is a powerful robot that is responsible for delivering packaging material to production lines, collecting empty pallets and trash, and delivering them to the proper locations. It also provides working height ergonomics for operators with pallet stands.
 							.swiper-slide
 								.PCaseStudyDetail-Roots__slider__slide
-									img(src="https://picsum.photos/seed/d-1/1920/1080", alt="alt")
-									h4 SEIT500 with Pallet Lift Attachment
-									p The SEIT500 with pallet lift attachment is a powerful robot that is responsible for delivering packaging material to production lines, collecting empty pallets and trash, and delivering them to the proper locations. It also provides working height ergonomics for operators with pallet stands.
+									img(src=require("@assets/images/casestudydetail_roots_2.jpg"), alt="alt")
+									h4 SEIT500 with Wide Chain Conveyor
+									p The SEIT500 with wide chain conveyor works as a safe and flexible conveyor between the supermarket area and the production lines. With its 500 kg payload capacity, this robot is capable of carrying containers of empty bottles over long distances. It works in synchrony with an elevator automatic feeding system, and it has a customized stopper design for ensuring the stability of the container.
 							.swiper-slide
 								.PCaseStudyDetail-Roots__slider__slide
-									img(src="https://picsum.photos/seed/d-2/1920/1080", alt="alt")
-									h4 SEIT500 with Pallet Lift Attachment
-									p The SEIT500 with pallet lift attachment is a powerful robot that is responsible for delivering packaging material to production lines, collecting empty pallets and trash, and delivering them to the proper locations. It also provides working height ergonomics for operators with pallet stands.
+									img(src=require("@assets/images/casestudydetail_roots_3.jpg"), alt="alt")
+									h4 SEIT500 with Custom Conveyor Attachment
+									p The SEIT500 with custom conveyor attachment and cabinet is responsible for emptying pallet infeed to stack packing material, infeeding full pallets of empty bottles, emptying packing material outfeed, and emptying pallet stack outfeed from the pallet magazine. It provides the ability to carry unstable loads with increased speed and safety compared to traditional conveyors. The cabinet keeps boxes of packing materials secured in perfect alignment and ensures the reliable use of an automatic feeder robotic arm at the line side.
 							.swiper-slide
 								.PCaseStudyDetail-Roots__slider__slide
 									img(src="https://picsum.photos/seed/d-3/1920/1080", alt="alt")
-									h4 SEIT500 with Pallet Lift Attachment
+									h4 SEIT500 with Pallet Lift Attachment
 									p The SEIT500 with pallet lift attachment is a powerful robot that is responsible for delivering packaging material to production lines, collecting empty pallets and trash, and delivering them to the proper locations. It also provides working height ergonomics for operators with pallet stands.
 							.swiper-slide
 								.PCaseStudyDetail-Roots__slider__slide
 									img(src="https://picsum.photos/seed/d-4/1920/1080", alt="alt")
-									h4 SEIT500 with Pallet Lift Attachment
+									h4 SEIT500 with Pallet Lift Attachment
 									p The SEIT500 with pallet lift attachment is a powerful robot that is responsible for delivering packaging material to production lines, collecting empty pallets and trash, and delivering them to the proper locations. It also provides working height ergonomics for operators with pallet stands.
 
 
@@ -154,11 +157,12 @@ block body
 
 	section.PCaseStudyDetail-Deployment
 		.container
-			.PCaseStudyDetail-Deployment__head
-				h3 Deployment and Continuous Support
-				p Onsite implementation and training was conducted efficiently with succinct in-person training sessions. Our AMRs are designed for simplified operation, allowing for a short training period. The Milvus Robotics support team provides remote monitoring and control at all times, as well as high-level continuous support. If issues arise, we provide backward mission flow analysis, allowing the support team to access detailed log files for troubleshooting.
-
 			.row.gy-4
+				.col-lg-9
+					.PCaseStudyDetail-Deployment__head
+						h3 Deployment and Continuous Support
+						p Onsite implementation and training was conducted efficiently with succinct in-person training sessions. Our AMRs are designed for simplified operation, allowing for a short training period. The Milvus Robotics support team provides remote monitoring and control at all times, as well as high-level continuous support. If issues arise, we provide backward mission flow analysis, allowing the support team to access detailed log files for troubleshooting.
+
 				.col-lg-9
 					.CGridBlock.PCaseStudyDetail-Deployment__block
 						.CGridBlock__body
@@ -224,16 +228,35 @@ block body
 		.container
 			.PCaseStudyDetail-Other__head Other Case Studies
 			.row.gy-4
-				- let n = 1;
-				while n <= 3
-					.col-lg-4
-						.PCaseStudy-Posts__post
-							.PCaseStudy-Posts__post__img
-								a(href="#")
-									img(src=`https://picsum.photos/seed/a-${n}/1920/1200`, alt="alt")
-							.PCaseStudy-Posts__post__body
-								i COMPANY NAME
-								h3
-									a(href="#") 12 ways companies are automating workflows with mobile robots
-								p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
-					- n++
+				.col-lg-4
+					.PCaseStudy-Posts__post
+						.PCaseStudy-Posts__post__img
+							a(href="#")
+								img(src=require("@assets/images/blog_1.jpg"), alt="alt")
+						.PCaseStudy-Posts__post__body
+							i COMPANY NAME
+							h3
+								a(href="#") 12 ways companies are automating workflows with mobile robots
+							p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+
+				.col-lg-4
+					.PCaseStudy-Posts__post
+						.PCaseStudy-Posts__post__img
+							a(href="#")
+								img(src=require("@assets/images/blog_2.jpg"), alt="alt")
+						.PCaseStudy-Posts__post__body
+							i COMPANY NAME
+							h3
+								a(href="#") 12 ways companies are automating workflows with mobile robots
+							p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
+
+				.col-lg-4
+					.PCaseStudy-Posts__post
+						.PCaseStudy-Posts__post__img
+							a(href="#")
+								img(src=require("@assets/images/blog_2.jpg"), alt="alt")
+						.PCaseStudy-Posts__post__body
+							i COMPANY NAME
+							h3
+								a(href="#") 12 ways companies are automating workflows with mobile robots
+							p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.

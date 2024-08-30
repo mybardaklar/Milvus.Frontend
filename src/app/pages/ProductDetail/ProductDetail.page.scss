@@ -1,5 +1,14 @@
 @use "@styles/mixins/include-media.scss" as *;
 
+.PProductDetail-Navbar {
+	background-color: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 6;
+	border-bottom-left-radius: 48px;
+	border-bottom-right-radius: 48px;
+}
+
 .PProductDetail-Hero {
 	position: relative;
 	padding-bottom: 48px;
@@ -25,7 +34,7 @@
 		justify-content: center;
 		text-align: center;
 		position: relative;
-		background-color: rgba(#000, 0.3);
+		background-color: rgba(#000, 0.4);
 		padding: 148px 0 96px;
 
 		.container {
@@ -49,7 +58,8 @@
 
 .PProductDetail-Detail {
 	background-color: #fff;
-	border-radius: 48px;
+	border-top-right-radius: 48px;
+	border-top-left-radius: 48px;
 	margin-top: -48px;
 	position: relative;
 
@@ -112,11 +122,12 @@
 	}
 
 	&__navbar {
-		padding: 16px;
 	}
 
 	&__dropdown {
 		position: relative;
+		z-index: 4;
+		border-right: 1px solid #eee;
 
 		&:hover {
 			.PProductDetail-Detail__dropdown__options {
@@ -128,8 +139,12 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 16px;
+			padding: 1rem;
 			cursor: pointer;
+
+			svg {
+				color: #a4a4a4;
+			}
 		}
 
 		&__options {
@@ -174,6 +189,8 @@
 	}
 
 	&__nav {
+		padding: 1rem 0;
+
 		ul {
 			display: flex;
 			flex-wrap: wrap;
@@ -185,6 +202,8 @@
 			li {
 				a {
 					display: inline-flex;
+					align-items: center;
+					gap: 0.25rem;
 					color: #898989;
 					border-bottom: 0.25rem solid transparent;
 					padding-bottom: 4px;
@@ -201,6 +220,7 @@
 	}
 
 	&__contact {
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
@@ -211,12 +231,6 @@
 		border-radius: 48px;
 		padding: 0 16px;
 		transition: all 400ms;
-
-		display: none;
-
-		@include media(">=lg") {
-			display: inline-flex;
-		}
 
 		&:hover {
 			opacity: 0.8;
@@ -234,6 +248,7 @@
 	background-repeat: no-repeat;
 	background-position: center -200%;
 	background-size: cover;
+	overflow: hidden;
 
 	&__head {
 		&__start {
@@ -281,6 +296,7 @@
 		margin-top: 48px;
 
 		.swiper {
+			overflow: visible;
 			.swiper-wrapper {
 				height: auto;
 
@@ -430,6 +446,8 @@
 
 		&--active {
 			.PProductDetail-Safety__accordion__head {
+				padding-bottom: 0;
+
 				strong {
 					color: #9b6e2b;
 				}

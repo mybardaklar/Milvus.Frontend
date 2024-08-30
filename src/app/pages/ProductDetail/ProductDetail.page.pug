@@ -7,7 +7,7 @@ block append variables
 block body
 	section.PProductDetail-Hero
 		.PProductDetail-Hero__img
-			img(src="https://picsum.photos/seed/a/1920/1080", alt="alt")
+			img(src=require("@assets/images/productdetail_hero.jpg"), alt="alt")
 		.PProductDetail-Hero__body
 			.container
 				img(src=require("@assets/images/productdetail_logo.png"), alt="alt")
@@ -15,7 +15,7 @@ block body
 
 
 
-	section.PProductDetail-Detail
+	section#PProductDetail-Overview.PProductDetail-Detail(data-section="PProductDetail-Overview")
 		.container
 			.PProductDetail-Detail__about
 				p Revolutionize your material handling tasks with our comprehensive suite of autonomous mobile robots (AMRs). Capable of safely maneuvering and transporting payloads up to 2000 kg, our AMRs are offered with a range of attachments to suit various application needs. Opt for AMRs to significantly cut costs and enhance operational efficiency.
@@ -34,45 +34,49 @@ block body
 						span Dimensions
 						strong 00x00x00 cm
 
-			.PProductDetail-Detail__navbar
-				.row.gy-4.align-items-center
-					.col-lg-3
-						.PProductDetail-Detail__dropdown
-							.PProductDetail-Detail__dropdown__selected
+
+
+	section.PProductDetail-Navbar
+		.container
+			.row.align-items-center
+				.col-lg-3
+					.PProductDetail-Detail__dropdown
+						.PProductDetail-Detail__dropdown__selected
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							.me-auto
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/></svg>
+						.PProductDetail-Detail__dropdown__options
+							a(href="#")
 								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
 								.me-auto
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/></svg>
-							.PProductDetail-Detail__dropdown__options
-								a(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
-								a.u-active(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
-								a(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+							a.u-active(href="#")
+								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+							a(href="#")
+								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
 
-					.col-lg-6
-						nav.PProductDetail-Detail__nav
-							ul
-								li.u-active
-									a(href="#") Overview
-								li
-									a(href="#") Fleet Management
-								li
-									a(href="#") Attachments
-								li
-									a(href="#") Safety
-								li
-									a(href="#") Datasheet
+				.col-md-9.col-lg-7
+					nav.PProductDetail-Detail__nav
+						ul
+							li(data-section="PProductDetail-Overview")
+								a(href="#PProductDetail-Overview") Overview
+							li(data-section="PProductDetail-Monitor")
+								a(href="#PProductDetail-Monitor") Fleet Management
+							li(data-section="PProductDetail-Attachments")
+								a(href="#PProductDetail-Attachments") Attachments
+							li(data-section="PProductDetail-Safety")
+								a(href="#PProductDetail-Safety") Safety
+							li
+								a(href="#") Datasheet
+									<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15.575q-.2 0-.375-.062T11.3 15.3l-3.6-3.6q-.3-.3-.288-.7t.288-.7q.3-.3.713-.312t.712.287L11 12.15V5q0-.425.288-.712T12 4t.713.288T13 5v7.15l1.875-1.875q.3-.3.713-.288t.712.313q.275.3.288.7t-.288.7l-3.6 3.6q-.15.15-.325.213t-.375.062M6 20q-.825 0-1.412-.587T4 18v-2q0-.425.288-.712T5 15t.713.288T6 16v2h12v-2q0-.425.288-.712T19 15t.713.288T20 16v2q0 .825-.587 1.413T18 20z"/></svg>
 
-					.col-lg-3.d-none.d-lg-block.text-lg-end
-						.PProductDetail-Detail__contact
-							a(href="#") Contact Us
+				.col-md-3.col-lg-2.d-none.d-md-block.text-md-end
+					.PProductDetail-Detail__contact
+						a(href="#") Contact Us
 
 
 
@@ -147,7 +151,7 @@ block body
 
 
 
-	section.PHome-Monitor
+	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor")
 		.container
 			.PHome-Monitor__head
 				h4 Milvus Fleet Manager
@@ -166,7 +170,7 @@ block body
 
 
 
-	section.PProductDetail-Attachments
+	section#PProductDetail-Attachments.PProductDetail-Attachments(data-section="PProductDetail-Attachments")
 		.PProductDetail-Attachments__head
 			.container
 				.row.gy-5.align-items-end
@@ -193,15 +197,15 @@ block body
 						.swiper-wrapper
 							.swiper-slide
 								.PProductDetail-Attachments__slider__slide
-									img(src="https://picsum.photos/seed/a-0/1920/1080", alt="alt")
+									img(src=require("@assets/images/productdetail_attachments_1.jpg"), alt="alt")
 									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 							.swiper-slide
 								.PProductDetail-Attachments__slider__slide
-									img(src="https://picsum.photos/seed/a-1/1920/1080", alt="alt")
+									img(src=require("@assets/images/productdetail_attachments_2.jpg"), alt="alt")
 									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 							.swiper-slide
 								.PProductDetail-Attachments__slider__slide
-									img(src="https://picsum.photos/seed/a-2/1920/1080", alt="alt")
+									img(src=require("@assets/images/productdetail_attachments_3.jpg"), alt="alt")
 									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 							.swiper-slide
 								.PProductDetail-Attachments__slider__slide
@@ -224,7 +228,7 @@ block body
 
 
 
-	section.PProductDetail-Safety
+	section#PProductDetail-Safety.PProductDetail-Safety(data-section="PProductDetail-Safety")
 		.container
 			.PProductDetail-Safety__head
 				h4 Safety
@@ -233,7 +237,7 @@ block body
 			.PProductDetail-Safety__body
 				.row.gy-4
 					.col-lg-6
-						img(src="https://picsum.photos/seed/a-4/1920/1080", alt="alt")
+						img(src=require("@assets/images/productdetail_safety.jpg"), alt="alt")
 					.col-lg-6
 						.PProductDetail-Safety__accordion(
 							x-data="{ show: true }",
@@ -278,36 +282,36 @@ block body
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_1.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_1.png"), alt="alt")
 						div
 							strong Light and Nimble
 							p Unleashes Powerful Performance
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_2.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_2.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Agility Meets Power
+							p Navigates Tightest Corners
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_3.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_3.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Mid-Size Master
+							p Maximizes Workflow Efficiency
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_4.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_4.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Built for the Toughest
+							p Delivering Unwavering Power

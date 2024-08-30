@@ -72,17 +72,6 @@ document.addEventListener("alpine:init", () => {
 	}));
 });
 
-const PHomeWhatWeDoTabs = ["Forensic & Integrity", "Accounting Compliance & Reporting"];
-
-const PServiceTabs = [
-	"Adli Muhasebe & Suistimal İnceleme",
-	"Suistimal Risk Yönetimi",
-	"Kurumsal İstihbarat",
-	"Ticari Uyuşmazlık Danışmanlığı",
-	"Adli Bilişim & Elektronik Keşif",
-	"Etik & Uyum",
-];
-
 document.addEventListener("DOMContentLoaded", () => {
 	new Swiper("#PProductDetail-Attachments__Slider", {
 		spaceBetween: 16,
@@ -118,77 +107,98 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	});
 
-	new Swiper(".PHome-WhatWeDo .swiper", {
-		spaceBetween: 16,
-		pagination: {
-			clickable: true,
-			el: "ul.PHome-WhatWeDo__tabs",
-			renderBullet: function (index, className) {
-				return `<li class="${className}">${PHomeWhatWeDoTabs[index]}</li>`;
-			},
-		},
-	});
-
-	new Swiper(".PService-Tab .swiper", {
-		spaceBetween: 16,
-		navigation: {
-			prevEl: ".PService-Tab .PService-Tab__content .PService-Tab__nav button.PService-Tab__nav--prev",
-			nextEl: ".PService-Tab .PService-Tab__content .PService-Tab__nav button.PService-Tab__nav--next",
-		},
-		pagination: {
-			clickable: true,
-			el: "ul.PService-Tab__tabs",
-			renderBullet: function (index, className) {
-				return `<li class="${className}">${PServiceTabs[index]}</li>`;
-			},
-		},
-	});
-
-	new Swiper(".PService-Case__slides .swiper", {
-		spaceBetween: 16,
-		navigation: {
-			prevEl: "button.PService-Case__head__nav--prev",
-			nextEl: "button.PService-Case__head__nav--next",
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: "auto",
-			},
-		},
-	});
-
-	new Swiper(".PService-Insights .swiper", {
-		spaceBetween: 16,
-		navigation: {
-			prevEl: "button.PService-Insights__nav--prev",
-			nextEl: "button.PService-Insights__nav--next",
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: "auto",
-			},
-		},
-	});
-
-	new Swiper(".PKariyer-Testimonials .swiper", {
-		spaceBetween: 16,
-		navigation: {
-			prevEl: "button.PKariyer-Testimonials__head__prev",
-			nextEl: "button.PKariyer-Testimonials__head__next",
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: "auto",
-			},
-		},
-	});
-
-	new Swiper(".PKariyer-Why .swiper", {
-		spaceBetween: 16,
-		slidesPerView: "auto",
-		navigation: {
-			prevEl: "button.PKariyer-Why__head__prev",
-			nextEl: "button.PKariyer-Why__head__next",
-		},
-	});
+	initAnimations();
 });
+
+function initAnimations() {
+	// gsap starts here
+	gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+	const sections = document.querySelectorAll("section[data-section]");
+	sections.forEach((item) => {
+		let getAttr = item.getAttribute("data-section");
+		gsap.from(`section[data-section="${getAttr}"]`, {
+			scrollTrigger: {
+				start: "top center",
+				end: "bottom 60%",
+				markers: false,
+				toggleActions: "play pause reverse reset",
+				onEnter: () => {
+					console.log(`nav.PProductDetail-Detail__nav ul li[data-section="${getAttr}"]`);
+					document
+						.querySelectorAll("nav.PProductDetail-Detail__nav ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+					document
+						.querySelector(
+							`nav.PProductDetail-Detail__nav ul li[data-section="${getAttr}"]`
+						)
+						.classList.add("u-active");
+				},
+				onEnterBack: () => {
+					console.log(`nav.PProductDetail-Detail__nav ul li[data-section="${getAttr}"]`);
+					document
+						.querySelectorAll("nav.PProductDetail-Detail__nav ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+					document
+						.querySelector(
+							`nav.PProductDetail-Detail__nav ul li[data-section="${getAttr}"]`
+						)
+						.classList.add("u-active");
+				},
+				onLeave: () => {
+					document
+						.querySelectorAll("nav.PProductDetail-Detail__nav ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+				},
+				onLeaveBack: () => {
+					document
+						.querySelectorAll("nav.PProductDetail-Detail__nav ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+				},
+				trigger: `section[data-section="${getAttr}"]`,
+			},
+		});
+	});
+
+	const titles = document.querySelectorAll(".PBlogDetail-Content [data-title]");
+	titles.forEach((item) => {
+		let getAttr = item.getAttribute("data-title");
+		console.log(getAttr);
+
+		gsap.from(`.PBlogDetail-Content [data-title="${getAttr}"]`, {
+			scrollTrigger: {
+				start: "top 20%",
+				end: "bottom 20%",
+				markers: false,
+				toggleActions: "play pause reverse reset",
+				onEnter: () => {
+					document
+						.querySelectorAll("aside.PBlogDetail-Sidebar ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+					document
+						.querySelector(`aside.PBlogDetail-Sidebar ul li[data-title="${getAttr}"]`)
+						.classList.add("u-active");
+				},
+				onEnterBack: () => {
+					document
+						.querySelectorAll("aside.PBlogDetail-Sidebar ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+					document
+						.querySelector(`aside.PBlogDetail-Sidebar ul li[data-title="${getAttr}"]`)
+						.classList.add("u-active");
+				},
+				onLeave: () => {
+					document
+						.querySelectorAll("aside.PBlogDetail-Sidebar ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+				},
+				onLeaveBack: () => {
+					document
+						.querySelectorAll("aside.PBlogDetail-Sidebar ul li")
+						.forEach((li) => li.classList.remove("u-active"));
+				},
+				trigger: `.PBlogDetail-Content [data-title="${getAttr}"]`,
+			},
+		});
+	});
+}

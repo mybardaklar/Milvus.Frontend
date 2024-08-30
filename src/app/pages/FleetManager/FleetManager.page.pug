@@ -1,0 +1,191 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Contact Us";
+
+block header
+	+CAppHeader(true)
+
+block body
+	section.PFleetManager-Hero
+		.container
+			.PFleetManager-Hero__text
+
+
+
+
+	section.PProductDetail-Detail
+		.container
+			.PProductDetail-Detail__about
+				p Milvus Fleet Manager is the ultimate way to control your robots from anywhere. All you need is a smart device! Our fleet management software supplies you with all the information you need to operate your fleet with ease. Think of our software as your fleet’s control center. It connects in real time so it will always give you the most up-to-date information.
+
+			.PProductDetail-Detail__navbar
+				.row.gy-4.align-items-center
+					.col-lg-3
+						.PProductDetail-Detail__dropdown
+							.PProductDetail-Detail__dropdown__selected
+								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/></svg>
+							.PProductDetail-Detail__dropdown__options
+								a(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+								a.u-active(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+								a(href="#")
+									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+									.me-auto
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+
+					.col-lg-6
+						nav.PProductDetail-Detail__nav
+							ul
+								li.u-active
+									a(href="#") Overview
+								li
+									a(href="#") Lorem ipsum dolor
+								li
+									a(href="#") Lorem ipsum
+								li
+									a(href="#") Lorem ipsum
+
+					.col-lg-3.d-none.d-lg-block.text-lg-end
+						.PProductDetail-Detail__contact
+							a(href="#") Contact Us
+
+
+
+
+	section.PProductDetail-Features
+		.container
+			.row.gy-4
+				.col-lg-8
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 1
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--light
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_2.png"), alt="alt")
+						.CGridBlock__body
+							h4 Feature 2
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 1
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--transparent
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_3.png"), alt="alt")
+						.CGridBlock__body
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+							br
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 2
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Feature 3
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
+
+				.col-lg-8
+					.CGridBlock.CGridBlock--light
+						.CGridBlock__img
+							img(src=require("@assets/images/feature_4.png"), alt="alt")
+						.CGridBlock__body
+							h4 Tech Specs
+							p Discover all the features and capabilities of this product.
+							br
+							a.a-button(href="#") Download
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+
+
+
+	section.PHome-Monitor
+		.container
+			.PHome-Monitor__head
+				h4 Lorem Ipsum
+
+			.row.align-items-center.gy-5.flex-lg-row-reverse
+				.col-lg-6.col-xl-7
+					.PHome-Monitor__img
+						img(src=require("@assets/images/home_monitor.png"), alt="alt")
+				.col-lg-6.col-xl-5
+					.PHome-Monitor__content
+						h3 Real-time Fleet Monitoring
+						h5 Stay informed on all aspects of<br>your robotic fleet.
+						p You can track all aspects of your fleet through our easy-to-use interface. When you use the Milvus Fleet Manager dashboards, you can empower different groups to supervise and deploy robots. You can monitor vehicle information, check robot health, and track the flow of materials from any mobile device. Toggle between map and status views so you’re always in the know about your robots and materials.
+						p Milvus doesn’t want you to have to go sifting through data to find the metrics that you need. That’s why we don’t just send alerts on time-sensitive material movement needs. We also send you smart notifications on key information such as throughput, distance, job takt times, and more. You can put minimal time and effort into staying informed.
+						p All this info and more is right at your fingertips! When you’re able to continuously monitor every robot in your fleet, you will experience increased productivity and optimized material flow.
+
+
+
+
+	section.PProductDetail-Explore
+		.container
+			h3 Explore our robots
+			.row.gy-4.mt-3
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
+				.col-sm-6.col-xl-3
+					.PHome-Solutions__solution
+						.PHome-Solutions__solution__img
+							img(src=require("@assets/images/solution_1.png"), alt="alt")
+						span.PHome-Solutions__solution__brand
+							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+						div
+							strong Light and Nimble
+							p Unleashes Powerful Performance
