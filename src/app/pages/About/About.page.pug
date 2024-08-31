@@ -1,0 +1,188 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "About Us";
+
+block header
+	+CAppHeader(true)
+
+block body
+	.container
+		section.PAbout-Hero
+			.PAbout-Hero__img
+				img(src=require("@assets/images/about_hero.jpg"), alt="alt")
+			.PAbout-Hero__body
+				h2 ABOUT MILVUS
+				h1 We forge the future where<br>AI meets mobility
+				p At the forefront of robotics innovation, we're bringing tomorrow's technology into the present. Our autonomous mobile robots combine cutting-edge AI with advanced mobility, creating intelligent solutions that streamline daily life and industry operations. We're not just predicting the future—we're actively building it.
+
+
+
+
+	section.PAbout-Mission
+		.container
+			.row.gy-4
+				.col-lg-4
+					.PAbout-Mission__head
+						h3 Mission and<br>Vision
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi. Maecenas finibus sed arcu interdum tincidunt. Duis in dapibus lacus, non fringilla eros. Cras sed congue quam. Donec in sapien sit amet massa ornare aliquet ac vitae nisl. Suspendisse potenti.
+
+				.col-lg-4
+					.PAbout-Mission__block
+						.text-end
+							img(src=require("@assets/images/about_mission_icon.png"), alt="alt")
+						strong Milvus Robotics is mission-driven.
+						p Milvus Robotics is on a mission to bridge the gap between robotics and commercial viability. We aspire to create meaningful, innovative robots that make people’s lives easier and help industries thrive.
+
+					.PAbout-Mission__block.mt-4
+						.text-end
+							img(src=require("@assets/images/about_mission_icon.png"), alt="alt")
+						strong A bright vision for a brighter future.
+						p We see bright possibilities of a world where both humans and robots join forces to challenge what’s possible and uncover limitless opportunities. Through automation, we envision a world where people and businesses can reap the rewards of efficiency and growth every day.
+
+				.col-lg-4
+					br.d-none.d-lg-block
+					br.d-none.d-lg-block
+					br.d-none.d-lg-block
+					br.d-none.d-lg-block
+					.PAbout-Mission__block.mt-lg-4
+						.text-end
+							img(src=require("@assets/images/about_mission_icon.png"), alt="alt")
+						strong Passion is our philosophy for all that we do.
+						p Founded in 2011, Milvus Robotics is applying the technological potential of autonomy, mobile robots and artificial intelligence across industries to improve production, operations and time to market. Milvus Robotics is proud to develop high-quality robots that see, reason and act to meet business and societal needs
+
+
+
+
+	section.PAbout-Core
+		.container
+			h3 Our Core Values
+			.row.gy-4
+				.col-lg-4
+					.PAbout-Core__block
+						div
+							h4 User focus
+							p Our innovations start with identifying your needs and challenges, and then creating sustainable business solutions to meet your growth and productivity objectives.
+						<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
+
+				.col-lg-4
+					.PAbout-Core__block
+						div
+							h4 Meaningful innovation
+							p Our portfolio serves a direct business need and purpose. We are proud to choose initiatives that advance human productivity and well-being.
+						<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
+
+				.col-lg-4
+					.PAbout-Core__block
+						div
+							h4 High-quality
+							p We have a robust set of quality standards so that every solution that we develop provides the best user experience possible.
+						<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
+
+
+
+
+	section.PAbout-Behind
+		.container
+			.row.gy-4
+				.col-lg-8
+					.PAbout-Behind__head
+						h3 The people and brain power behind our robots.
+						p Milvus Robotics was founded in 2011 when four college friends shared a genuine passion and curiosity for robotics. To this day, it’s this same passion and curiosity that has served as the secret to our success.
+
+				.col-lg-4
+
+				.col-lg-4
+					.PAbout-Behind__block
+						img(src=require("@assets/images/casestudydetail_roots_1.jpg"), alt="alt")
+						strong SEIT500 with Pallet Lift Attachment
+
+				.col-lg-4
+					.PAbout-Behind__block
+						img(src=require("@assets/images/casestudydetail_roots_2.jpg"), alt="alt")
+						strong SEIT500 with Wide Chain Conveyor
+
+				.col-lg-4
+					.PAbout-Behind__block
+						img(src=require("@assets/images/casestudydetail_roots_3.jpg"), alt="alt")
+						strong SEIT500 with Custom Conveyor Attachment
+
+
+
+
+	section.PAbout-Autonomous
+		.container
+			.row.gy-4
+				.col-lg-8
+					.CGridBlock.PAbout-Block
+						.CGridBlock__body
+							strong 10.000.000+
+							h4 Autonomous<br>Miles Driven
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--light.PAbout-Block
+						.CGridBlock__img
+							img(src=require("@assets/images/about_block_2.jpg"), alt="alt")
+						.CGridBlock__body
+							h4 25+<br>Countries
+
+				.col-lg-4
+					.CGridBlock.PAbout-Block--mb
+						.CGridBlock__body
+							h4 100+<br>Employees
+							img(src=require("@assets/images/about_feature_icon.png"), alt="alt", width="80")
+
+				.col-lg-8
+					.CGridBlock.PAbout-Block--gradient
+						.CGridBlock__body
+							h4 50+<br>Global Brands
+
+
+
+
+	section.PAbout-Global
+		.container
+			.row.g-5.align-items-center
+				.col-lg-6
+					img(src=require("@assets/images/productdetail_safety.jpg"), alt="alt")
+				.col-lg-6
+					h3 Our global network
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi. Maecenas finibus sed arcu interdum tincidunt. Duis in dapibus lacus, non fringilla eros. Cras sed congue quam. Donec in sapien sit amet massa ornare aliquet ac vitae nisl. Suspendisse potenti.
+
+
+
+
+	section.PAbout-History
+		.container
+			.row
+				.col-lg-6
+					.PAbout-History__head
+						h3 Our History
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi.
+
+			.PAbout-History__timeline
+				.row.gx-5.gy-5.mt-4.gy-lg-0.mt-lg-0
+					.col-lg-6.d-none.d-lg-block
+
+					.col-lg-6
+						.PAbout-History__timeline__item
+							strong 2024
+							h4 Lorem ipsum dolor sit amet
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi.
+
+					.col-lg-6
+						.PAbout-History__timeline__item.u-right
+							strong 2023
+							h4 Lorem ipsum dolor sit amet
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi.
+
+					.col-lg-6.d-none.d-lg-block
+
+					.col-lg-6.d-none.d-lg-block
+
+					.col-lg-6
+						.PAbout-History__timeline__item
+							strong 2024
+							h4 Lorem ipsum dolor sit amet
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fermentum nulla felis, eget egestas dui interdum vel. Curabitur placerat magna id eleifend condimentum. Fusce nec venenatis mi.
