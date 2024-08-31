@@ -2,7 +2,7 @@ extends @layouts/Default/Default.layout.pug
 
 block append variables
 	-
-		pageProps.title = "Contact Us";
+		pageProps.title = "Fleet Manager";
 
 block header
 	+CAppHeader(true)
@@ -11,52 +11,43 @@ block body
 	section.PFleetManager-Hero
 		.container
 			.PFleetManager-Hero__text
+				img(src=require("@assets/images/fleetmanager_hero_text.png"), alt="alt")
+			h1 Lorem ipsum<br>Dolor sit amet consectetur.
 
 
 
 
-	section.PProductDetail-Detail
+	section#PProductDetail-Overview.PProductDetail-Detail.PFleetManager-Detail(data-section="PProductDetail-Overview")
 		.container
+			.PFleetManager-Detail__img
+				img(src=require("@assets/images/fleetmanager_hero.png"), alt="alt")
 			.PProductDetail-Detail__about
 				p Milvus Fleet Manager is the ultimate way to control your robots from anywhere. All you need is a smart device! Our fleet management software supplies you with all the information you need to operate your fleet with ease. Think of our software as your fleet’s control center. It connects in real time so it will always give you the most up-to-date information.
 
-			.PProductDetail-Detail__navbar
-				.row.gy-4.align-items-center
-					.col-lg-3
-						.PProductDetail-Detail__dropdown
-							.PProductDetail-Detail__dropdown__selected
-								img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-								.me-auto
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="48" d="m112 184l144 144l144-144"/></svg>
-							.PProductDetail-Detail__dropdown__options
-								a(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
-								a.u-active(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
-								a(href="#")
-									img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
-									.me-auto
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
 
-					.col-lg-6
-						nav.PProductDetail-Detail__nav
-							ul
-								li.u-active
-									a(href="#") Overview
-								li
-									a(href="#") Lorem ipsum dolor
-								li
-									a(href="#") Lorem ipsum
-								li
-									a(href="#") Lorem ipsum
 
-					.col-lg-3.d-none.d-lg-block.text-lg-end
-						.PProductDetail-Detail__contact
-							a(href="#") Contact Us
+
+	section.PProductDetail-Navbar
+		.container
+			.row.align-items-center
+				.col-lg-3.d-none.d-lg-block
+					img(src=require("@assets/images/fleetmanager_nav_text.png"), alt="alt")
+
+				.col-md-9.col-lg-7
+					nav.PProductDetail-Detail__nav
+						ul
+							li(data-section="PProductDetail-Overview")
+								a(href="#PProductDetail-Overview") Overview
+							li(data-section="PProductDetail-Monitor")
+								a(href="#PProductDetail-Monitor") Lorem ipsum dolor
+							li(data-section="PProductDetail-Attachments")
+								a(href="#PProductDetail-Attachments") Lorem ipsum
+							li(data-section="PProductDetail-Safety")
+								a(href="#PProductDetail-Safety") Lorem ipsum
+
+				.col-md-3.col-lg-2.d-none.d-md-block.text-md-end
+					.PProductDetail-Detail__contact
+						a(href="#") Contact Us
 
 
 
@@ -129,7 +120,7 @@ block body
 
 
 
-	section.PHome-Monitor
+	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor")
 		.container
 			.PHome-Monitor__head
 				h4 Lorem Ipsum
@@ -149,6 +140,81 @@ block body
 
 
 
+	section#PProductDetail-Attachments.PFleetManager-SeamlessIntegration(data-section="PProductDetail-Attachments")
+		.container
+			.PFleetManager-Block
+				.row.g-5.flex-lg-row-reverse
+					.col-lg-6
+						.PFleetManager-Block__img
+							img(src=require("@assets/images/casestudydetail_roots_1.jpg"), alt="alt")
+					.col-lg-6
+						.PFleetManager-Block__body
+							h5 Lorem Ipsum
+							h3 Seamless Integration Process
+							h4 The Milvus Fleet Manager is compatible with virtually any system!
+							p Integrating a new software is often complicated, but with Milvus Fleet Management and our custom tools, it’s simple. Because of our superior flexibility and powerful REST API, we can integrate with any WMS/MES or custom system. This allows you to create new tasks procedures in an automated way without using your software’s user interface.
+							p The Milvus Fleet Manager is also compatible with PLC and OPC-UA systems. You’ll have all the sensor readings you need right at your fingertips and be able to activate jobs with powerful data. You shouldn’t have any problems using our fleet management system in conjunction with cobots or other devices you’re using for materials handling.
+
+
+
+
+	section#PProductDetail-Safety.PFleetManager-CuttingEdge(data-section="PProductDetail-Safety")
+		.container
+			.PFleetManager-Block
+				.row.g-5
+					.col-lg-6
+						.PFleetManager-Block__img
+							img(src=require("@assets/images/casestudydetail_roots_2.jpg"), alt="alt")
+					.col-lg-6
+						.PFleetManager-Block__body
+							h5 Lorem Ipsum
+							h3 Cutting-edge Reporting Tools
+							h4 The most effective way to enhance the performance of your robot fleet!
+							p Each robot generates a massive amount of data. This is a tremendous asset to choosing Milvus for your robots, but keeping track of all this data can also create more work for you and your employees.
+							p Luckily, the Milvus Fleet Manager not only records data but also provides you with meaningful insights on your data. We record utilization rates, task failure rates, distances traveled, and processed orders. Our reports are easy to understand and provide you with key information you need to not only run your business but continuously improve it. Because we store data, you can also observe trends over time and identify areas for improvement. When used properly, our cutting-edge reporting tools lead to a strong return on investment.
+
+
+
+
+	section.PFleetManager-Multirobot
+		.container
+			.PFleetManager-Block
+				.row.g-5.flex-lg-row-reverse
+					.col-lg-6
+						.PFleetManager-Block__img
+							img(src=require("@assets/images/casestudydetail_roots_3.jpg"), alt="alt")
+						.PProductDetail-Safety__accordion(
+							x-data="{ show: true }",
+							x-bind:class="{ 'PProductDetail-Safety__accordion--active': show }"
+						)
+							.PProductDetail-Safety__accordion__head(x-on:click="show = !show")
+								strong Optimized Traffic Flow
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+							.PProductDetail-Safety__accordion__body
+								p Milvus takes traffic management very seriously. That’s why we impose traffic regulations on our robots similar to those imposed on automobiles. Robots must adhere to speed limits, one-way zones, stop signs, and restricted areas. You even have the power to draw virtual lines that your robots must stay on as they move between stations. You won’t have to worry about robots running into each other, blocking work areas, or getting in the way of your employees. Things can operate smoothly.
+
+						.PProductDetail-Safety__accordion(
+							x-data="{ show: false }",
+							x-bind:class="{ 'PProductDetail-Safety__accordion--active': show }"
+						)
+							.PProductDetail-Safety__accordion__head(x-on:click="show = !show")
+								strong Advanced Task Monitoring
+								.me-auto
+								<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 21 21"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="m14.5 8.5l-4 4l-4-4"/></svg>
+							.PProductDetail-Safety__accordion__body
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel.
+
+					.col-lg-6
+						.PFleetManager-Block__body
+							h5 Lorem Ipsum
+							h3 Strategic Multi-robot Collaboration
+							h4 No matter the size of your facility, you can expect your robots to work synergistically to enhance your operation.
+							p Multi-robot deployments can sometimes lead to confusion and inefficiencies, but Milvus Fleet Manager knows how to optimize even large deployments with many robots. Every robot has different features that make them suited for certain tasks better than others. Our software knows how to allocate tasks to the robot that will produce the best results. When every robot is doing its part to make your operation thrive, you can expect maximum efficiency.
+
+
+
+
 	section.PProductDetail-Explore
 		.container
 			h3 Explore our robots
@@ -156,36 +222,36 @@ block body
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_1.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_1.png"), alt="alt")
 						div
 							strong Light and Nimble
 							p Unleashes Powerful Performance
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_2.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_2.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Agility Meets Power
+							p Navigates Tightest Corners
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_3.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_3.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Mid-Size Master
+							p Maximizes Workflow Efficiency
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
 						.PHome-Solutions__solution__img
-							img(src=require("@assets/images/solution_1.png"), alt="alt")
+							img(src=require("@assets/images/header_product_4.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
-							img(src=require("@assets/images/solution_brand_1.png"), alt="alt")
+							img(src=require("@assets/images/home_solutions_brands_4.png"), alt="alt")
 						div
-							strong Light and Nimble
-							p Unleashes Powerful Performance
+							strong Built for the Toughest
+							p Delivering Unwavering Power
