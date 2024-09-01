@@ -1,0 +1,385 @@
+extends @layouts/Default/Default.layout.pug
+
+block append variables
+	-
+		pageProps.title = "Careers";
+
+block header
+	+CAppHeader(true)
+
+block body
+	.container
+		section.PCareers-Hero
+			.PCareers-Hero__img
+				img(src=require("@assets/images/careers_hero.jpg"), alt="alt")
+			.PCareers-Hero__body
+				h1 Innovators Wanted to<br>Elevate Robotics Positions!
+				p Milvus Robotics is looking for bright minds who aren’t afraid to think outside the box.The world of robotics is fast-paced and exciting. You never know what a workday may hold for you, but you know you won’t get bored!
+				.PCareers-Hero__links
+					a(href="/") Open Positions
+					a(href="/") Find Out More
+
+
+
+
+	section.PCareers-Working
+		.container
+			.row.g-5.flex-lg-row-reverse
+				.col-lg-6
+					img(src=require("@assets/images/careers_working.jpg"), alt="alt")
+				.col-lg-6
+					h3 Working at<br>Milvus Robotics
+					.PCareers-Working__block
+						p When you work at Milvus Robotics, you are contributing to a company that proudly designs and develops some of the most innovative and powerful Autonomous Mobile Robots in the world.
+						p Our emphasis on safe and intelligent design is propelling the industry to bigger and better things. We help companies all over the world maximize productivity while keeping their employees and equipment safe.
+						p At Milvus, you can be a part of this highly innovative community that’s ripe with potential. You’ll play a crucial role in advancing the use of artificial intelligence and other edge technologies.
+
+
+
+
+	section.PHome-Monitor.PCareers-Monitor
+		.container
+			.row.gy-5.flex-lg-row-reverse
+				.col-lg-6
+					.PHome-Monitor__img
+						img(src=require("@assets/images/careers_culture.jpg"), alt="alt")
+				.col-lg-6
+					.PHome-Monitor__content
+						h3 Culture and Values
+						p We take an experimental approach to our work. To produce cutting-edge results, we believe that employees must be given the space to exercise their most creative, unique ideas. Sometimes these ideas may not work out, but it’s all part of the process. We give employees constructive, helpful feedback so they can continue to grow.
+						p We believe work should be fun! Employees do their best work when they are enjoying themselves. By fostering an environment that employees enjoy coming to each day, we are setting our employees up for success.
+
+
+
+
+	section.PCareers-Benefits
+		.container
+			.PCareers-Benefits__head
+				h3 Benefits
+				p Take a look at all the benefits that await you at Milvus Robotics!
+
+			.row.g-5
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Health Benefits
+							p Lorem ipsum dolor sit amet, consectetur
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_1.png"), alt="alt")
+
+				.col-lg-8
+					.CGridBlock.CGridBlock--light
+						.CGridBlock__img
+							img(src=require("@assets/images/careers_benefits_bg_1.jpg"), alt="alt")
+						.CGridBlock__body
+							h4 Morale-boosting activities
+							p Lorem ipsum dolor sit amet, consectetur.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_2.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Health Benefits
+							p Lorem ipsum dolor sit amet, consectetur.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_1.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Delicious & Nutritious snacks
+							p Lorem ipsum dolor sit amet, consectetur.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_3.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock.CGridBlock--dark
+						.CGridBlock__body
+							h4 Employees first
+							p Lorem ipsum dolor sit amet, consectetu.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_4.png"), alt="alt")
+
+				.col-lg-8
+					.CGridBlock
+						.CGridBlock__img
+							img(src=require("@assets/images/careers_benefits_bg_2.jpg"), alt="alt")
+						.CGridBlock__body
+							h4 Time off for birthdays
+							p Lorem ipsum dolor sit amet, consectetur.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_5.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Travel opportunities
+							p Lorem ipsum dolor sit amet, consectetu.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_6.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__img
+							img(src=require("@assets/images/careers_benefits_bg_3.svg"), alt="alt")
+						.CGridBlock__body
+							h4 Knowledge-sharing community
+							p Lorem ipsum dolor sit amet, consectet.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_7.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 Educational Conferences
+							p Lorem ipsum dolor sit amet, consecte.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_8.png"), alt="alt")
+
+				.col-lg-4
+					.CGridBlock
+						.CGridBlock__body
+							h4 High-quality coffee
+							p Lorem ipsum dolor sit amet, consectet.
+							.mb-auto
+							img.mt-4(src=require("@assets/images/careers_benefits_9.png"), alt="alt")
+
+
+
+
+	section.PCareers-Departments
+		.container
+			h3 Departments
+			.row.justify-content-between.gy-4(x-data="{ activeTab: 0 }")
+				.col-lg-4
+					button(
+						x-on:click.prevent="activeTab = 0",
+						x-bind:class="{ 'u-active': activeTab === 0 }"
+					)
+						span Hardware
+						.me-auto
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+					button(
+						x-on:click.prevent="activeTab = 1",
+						x-bind:class="{ 'u-active': activeTab === 1 }"
+					)
+						span Software
+						.me-auto
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+					button(
+						x-on:click.prevent="activeTab = 2",
+						x-bind:class="{ 'u-active': activeTab === 2 }"
+					)
+						span Production
+						.me-auto
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+					button(
+						x-on:click.prevent="activeTab = 3",
+						x-bind:class="{ 'u-active': activeTab === 3 }"
+					)
+						span Technical Support
+						.me-auto
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+					button(
+						x-on:click.prevent="activeTab = 4",
+						x-bind:class="{ 'u-active': activeTab === 4 }"
+					)
+						span Business
+						.me-auto
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+				.col-lg-6
+					div(x-show="activeTab === 0")
+						img(src=require("@assets/images/careers_departments.png"), alt="alt")
+						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
+					div(x-show="activeTab === 1")
+						img(src="https://picsum.photos/seed/seed1/1280/720", alt="alt")
+						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
+					div(x-show="activeTab === 2")
+						img(src="https://picsum.photos/seed/seed2/1280/720", alt="alt")
+						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
+					div(x-show="activeTab === 3")
+						img(src="https://picsum.photos/seed/seed3/1280/720", alt="alt")
+						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
+					div(x-show="activeTab === 4")
+						img(src="https://picsum.photos/seed/seed4/1280/720", alt="alt")
+						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
+
+
+
+
+	section.PCareers-Succeed
+		.container
+			h3 When they succeed, <strong>we succeed!</strong>
+			h4 To be the global leader in robotics,<br>we need the best of the best for employees.
+			span Samil Ozden, CEO & Co-founder
+
+
+
+
+	section.PCareers-Programs
+		.container
+			.row.g-5
+				.col-lg-4
+					.PCareers-Programs__head
+						h3 Programs for<br>Current Students<br>and New Graduates
+						p At Milvus Robotics, we want to prepare students to be valuable contributors in the workplace tomorrow. Our programs for students and recent graduates give young people valuable insight into our industry and help prepare them for fulfilling careers. We do it all in a rich learning environment full of practical experience and the brightest minds in robotics.
+
+				.col-lg-8
+					.PCareers-Programs__program
+						.row.align-items-center.gy-4
+							.col-lg-4
+								strong Internships
+							.col-lg-8
+								p Our internships range from eight to twelve weeks and provide every intern with invaluable real-world experience in their field of choice. Recent graduates will also have the option of a program specially designed for them.
+
+					.PCareers-Programs__program
+						.row.align-items-center.gy-4
+							.col-lg-4
+								strong Part-Time<br>Jobs
+							.col-lg-8
+								p We provide flexible part-time jobs for students wanting to work 10 to 20 hours a week.
+
+					.PCareers-Programs__program
+						.row.align-items-center.gy-4
+							.col-lg-4
+								strong Thesis<br>Program
+							.col-lg-8
+								p We are happy to offer our expertise as a source for graduate students writing their theses, especially if they started at Milvus as part-time students or interns.
+
+
+
+
+	section.PCareers-Careers
+		.container
+			.row.gy-4
+				.col-lg-4
+					.PCareers-Careers__block
+						h3 Job<br>Openings
+						p Here are the open robotics positions we currently have at Milvus. Check them out to see where your skills fit and how you can contribute to our company.
+					.PCareers-Careers__block.PCareers-Careers__block--light
+						h3 Not seeing<br>what you’re<br>looking for<br>right now?
+						p Milvus Robotics is happy to accept unsolicited applications. Use the link below to submit your resume and we will keep you in mind for future openings.
+						a.a-button(href="#") Submit Resume
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+				.col-lg-8
+					.PCareers-Jobs(x-data="{ activeTab: 0 }")
+						.PCareers-Jobs__tabs
+							button(
+								x-on:click.prevent="activeTab = 0",
+								x-bind:class="{ 'u-active': activeTab === 0 }"
+							) Full time
+							button(
+								x-on:click.prevent="activeTab = 1",
+								x-bind:class="{ 'u-active': activeTab === 1 }"
+							) Part time
+							button(
+								x-on:click.prevent="activeTab = 2",
+								x-bind:class="{ 'u-active': activeTab === 2 }"
+							) Internship
+
+						.PCareers-Jobs__body
+							div(x-show="activeTab === 0")
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong Senior Front-End Developer
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong Technical Support Specialist
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong Marketing Specialist
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong Robotics Software Engineer
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong Graphic Designer
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+								a.PCareers-Jobs__job(href="#")
+									.row.gy-4
+										.col-sm-6
+											strong DevOps Engineer
+											span Ankara, Turkey
+										.col-sm-6.text-sm-end
+											.a-button
+												i Job Details
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+
+							div(x-show="activeTab === 1")
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							div(x-show="activeTab === 2")
+								p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+
+
+	section.PCareers-Process
+		.container
+			.PCareers-Process__head
+				.row
+					.col-lg-7
+						h3 How Our Recruitment<br>Process Works
+						p Our recruitment process is simple. We lay out all the details for applicants so you know exactly what to expect. It’s through these six simple steps that you can accomplish your dreams.<br>Here’s how it works:
+
+			.PCareers-Process__process
+				.row.gy-4
+					.col-sm-6.col-lg-2
+						strong 1
+						p You submit your application.
+
+					.col-sm-6.col-lg-2
+						strong 2
+						p We call or email you to schedule an interview.
+
+					.col-sm-6.col-lg-2
+						strong 3
+						p We interview you for the first time.
+
+					.col-sm-6.col-lg-2
+						strong 4
+						p You complete an assessment.
+
+					.col-sm-6.col-lg-2
+						strong 5
+						p You meet your future team and complete your final interview.
+
+					.col-sm-6.col-lg-2
+						strong 6
+						p We offer you your dream job!
