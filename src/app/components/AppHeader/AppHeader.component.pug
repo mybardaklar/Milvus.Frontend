@@ -22,19 +22,19 @@ mixin CAppHeader(static = false)
 			nav.CAppHeader__nav
 				ul
 					li
-						a(href="#") Home
+						a(href="/") Home
 					li
 						span(
 							data-dropdown-id="solutions",
 							x-bind="CAppHeaderDropdownTriggerBinding"
 						) Solutions
 					li
-						a(href="#") Company
+						a(href="about.html") Company
 					li
-						a(href="#") Resources
+						a(href="blog.html") Resources
 
 			.CAppHeader__end
-				a(href="#") Contact Us
+				a(href="contact.html") Contact Us
 				button(x-on:click="$store.navigationDrawer.activate()")
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M20 7H4m16 5H4m16 5H4"/></svg>
 
@@ -48,7 +48,7 @@ mixin CAppHeader(static = false)
 							h6 Robots
 							.row.gx-0
 								.col-sm-3.col-xl-3
-									a.PHome-Solutions__solution(href="#1")
+									a.PHome-Solutions__solution(href="productdetail.html")
 										.PHome-Solutions__solution__img
 											img(src=require("@assets/images/header_product_1.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
@@ -57,7 +57,7 @@ mixin CAppHeader(static = false)
 											strong Light and Nimble
 											p Unleashes Powerful Performance
 								.col-sm-3.col-xl-3
-									a.PHome-Solutions__solution(href="#2")
+									a.PHome-Solutions__solution(href="productdetail.html")
 										.PHome-Solutions__solution__img
 											img(src=require("@assets/images/header_product_2.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
@@ -66,7 +66,7 @@ mixin CAppHeader(static = false)
 											strong Agility Meets Power
 											p Navigates Tightest Corners
 								.col-sm-3.col-xl-3
-									a.PHome-Solutions__solution(href="#3")
+									a.PHome-Solutions__solution(href="productdetail.html")
 										.PHome-Solutions__solution__img
 											img(src=require("@assets/images/header_product_3.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
@@ -75,7 +75,7 @@ mixin CAppHeader(static = false)
 											strong Mid-Size Master
 											p Maximizes Workflow Efficiency
 								.col-sm-3.col-xl-3
-									a.PHome-Solutions__solution(href="#4")
+									a.PHome-Solutions__solution(href="productdetail.html")
 										.PHome-Solutions__solution__img
 											img(src=require("@assets/images/header_product_4.png"), alt="alt")
 										span.PHome-Solutions__solution__brand
@@ -86,7 +86,7 @@ mixin CAppHeader(static = false)
 						.col-lg-4
 							h6 More
 							.CAppHeader__megamenu__links
-								a(href="#")
+								a(href="fleetmanager.html")
 									div
 										strong Milvus Fleet Manager
 										p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
