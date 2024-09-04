@@ -201,4 +201,59 @@ function initAnimations() {
 			},
 		});
 	});
+
+	const elements_up = document.querySelectorAll(".gsap-reveal");
+
+	elements_up.forEach((element) => {
+		const yValue = element.getAttribute("data-y") || 50;
+		const xValue = element.getAttribute("data-x") || 0;
+		const delayValue = element.getAttribute("data-delay") || 0;
+
+		gsap.from(element, {
+			duration: 1.5,
+			y: parseFloat(yValue),
+			x: parseFloat(xValue),
+			opacity: 0,
+			delay: parseFloat(delayValue),
+			ease: "power2.out",
+			scrollTrigger: {
+				trigger: element,
+				start: "top 80%",
+				toggleActions: "play none none none",
+			},
+		});
+	});
+
+	const flip_elements = document.querySelectorAll(".flip-on-scroll");
+
+	// Iterate over each element and apply the scroll-triggered flip animation
+	flip_elements.forEach((element) => {
+		gsap.from(element, {
+			duration: 1, // Duration of the flip animation
+			rotationX: 180, // Flip 180 degrees on the X-axis
+			opacity: 0, // Start with 0 opacity
+			ease: "back.out(1.7)", // Easing function for a smooth and elastic effect
+			transformOrigin: "center bottom", // Set transform origin for the flip effect
+			scrollTrigger: {
+				trigger: element, // Element that triggers the animation
+				start: "top 80%", // Start the animation when the top of the element hits 80% of the viewport
+				toggleActions: "play none none none", // Play the animation when it enters the viewport
+			},
+		});
+	});
+
+	const blocks = document.querySelectorAll(".float-around");
+
+	// Iterate over each block and apply the floating animation
+	blocks.forEach((block) => {
+		gsap.to(block, {
+			duration: 3, // Duration of the animation
+			x: "random(-20, 20)", // Random movement on the x-axis within a range
+			y: "random(-20, 20)", // Random movement on the y-axis within a range
+			ease: "sine.inOut", // Smooth, continuous motion with sine easing
+			repeat: -1, // Infinite looping
+			yoyo: true, // Reverse the animation back and forth
+			delay: Math.random(), // Random delay to stagger the start of each element
+		});
+	});
 }

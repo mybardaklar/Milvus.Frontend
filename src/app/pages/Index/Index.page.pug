@@ -10,38 +10,38 @@ block body
 			img(src=require("@assets/images/hero.jpg"), alt="alt")
 		.PHome-Hero__body
 			.container
-				h1 Moving the World Forward
+				h1.gsap-reveal Moving the World Forward
 					br
 					| with Material Handling
 
 
 
 
-	section.PHome-Companies
+	section.PHome-Companies.gsap-reveal
 		.container
-			strong Trusted Companies Trust Milvus
+			strong.flip-on-scroll Trusted Companies Trust Milvus
 			.row.align-items-center.justify-content-center.gy-5
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_pg.png"), alt="alt")
+					img(src=require("@assets/images/company_pg.png"), alt="alt").flip-on-scroll
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_unilever.png"), alt="alt")
+					img(src=require("@assets/images/company_unilever.png"), alt="alt").flip-on-scroll
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_royer.png"), alt="alt")
+					img(src=require("@assets/images/company_royer.png"), alt="alt").flip-on-scroll
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_pg.png"), alt="alt")
+					img(src=require("@assets/images/company_pg.png"), alt="alt").flip-on-scroll
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_unilever.png"), alt="alt")
+					img(src=require("@assets/images/company_unilever.png"), alt="alt").flip-on-scroll
 				.col-6.col-md-4.col-lg-3.col-xl-2
-					img(src=require("@assets/images/company_royer.png"), alt="alt")
+					img(src=require("@assets/images/company_royer.png"), alt="alt").flip-on-scroll
 
 
 
 
-	section.PHome-Solutions
+	section.PHome-Solutions.gsap-reveal
 		.container
 			.row.flex-lg-row-reverse.gy-4
 				.col-lg-6
-					.PHome-Solutions__img
+					.PHome-Solutions__img.float-around 
 						img(src=require("@assets/images/solutions_img.jpg"), alt="alt")
 				.col-lg-6
 					.PHome-Solutions__head
@@ -58,7 +58,8 @@ block body
 						span.PHome-Solutions__solution__brand
 							img(src=require("@assets/images/home_solutions_brands_1.png"), alt="alt")
 						div
-							strong Light and Nimble
+							a(href="#") 
+								strong Light and Nimble
 							p Unleashes Powerful Performance
 				.col-sm-6.col-xl-3
 					.PHome-Solutions__solution
@@ -91,17 +92,17 @@ block body
 
 
 
-	section.PHome-Monitor
+	section.PHome-Monitor.gsap-reveal
 		.container
 			.PHome-Monitor__head
 				h4 Milvus Fleet Manager
 
 			.row.align-items-center.gy-5.flex-lg-row-reverse
-				.col-lg-6.col-xl-7
+				.col-lg-6.col-xl-7.gsap-reveal(data-y="0", data-x="-20")
 					.PHome-Monitor__img
 						img(src=require("@assets/images/home_monitor.png"), alt="alt")
 				.col-lg-6.col-xl-5
-					.PHome-Monitor__content
+					.PHome-Monitor__content.gsap-reveal(data-y="0", data-x="20", data-delay="0.2")
 						h3 Effortlessly manage and monitor your fleet anytime, anywhere.
 						a.a-button(href="#") Discover
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
@@ -110,7 +111,7 @@ block body
 
 
 
-	section.PHome-Advantages
+	section.PHome-Advantages.gsap-reveal
 		.container
 			.row.gy-4
 				.col-lg-4
@@ -132,33 +133,33 @@ block body
 						h4 Scale Faster
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						.PHome-Advantages__advantage__imgs
-							img(src=require("@assets/images/advantage_scale_faster_1.png"), alt="alt")
-							img(src=require("@assets/images/advantage_scale_faster_2.png"), alt="alt")
+							img(src=require("@assets/images/advantage_scale_faster_1.png"), alt="alt").float-around
+							img(src=require("@assets/images/advantage_scale_faster_2.png"), alt="alt").float-around
 
 				.col-lg-4
 					.PHome-Advantages__advantage
 						h4 Work Safer
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						.PHome-Advantages__advantage__imgs
-							img(src=require("@assets/images/advantage_work_safer_1.png"), alt="alt")
-							img(src=require("@assets/images/advantage_work_safer_2.png"), alt="alt")
+							img(src=require("@assets/images/advantage_work_safer_1.png"), alt="alt").float-around
+							img(src=require("@assets/images/advantage_work_safer_2.png"), alt="alt").float-around
 
 				.col-lg-4
 					.PHome-Advantages__advantage
 						h4 Decide Smarter
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 						.PHome-Advantages__advantage__imgs
-							img(src=require("@assets/images/advantage_decide_smarter_1.png"), alt="alt")
-							img(src=require("@assets/images/advantage_decide_smarter_2.png"), alt="alt")
+							img(src=require("@assets/images/advantage_decide_smarter_1.png"), alt="alt").float-around
+							img(src=require("@assets/images/advantage_decide_smarter_2.png"), alt="alt").float-around
 
 
 
 
-	section.PHome-News
+	section.PHome-News.gsap-reveal
 		.container
 			.row.gy-5
 				.col-lg-5
-					.PHome-News__head
+					.PHome-News__head.gsap-reveal(data-delay="0.5")
 						h3 Learn more from<br>our news
 						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor odio vel elementum suscipit. Ut dignissim dapibus mi vitae porttitor.
 						.mb-auto
@@ -167,7 +168,7 @@ block body
 
 				.col-lg-7
 					.PHome-News__wrapper
-						.PHome-News__news
+						.PHome-News__news.gsap-reveal
 							img(src=require("@assets/images/home_news_1.jpg"), alt="alt")
 							.d-flex.flex-column.gap-2.align-items-center.align-items-sm-start
 								h4
@@ -176,7 +177,7 @@ block body
 									strong MAY 05, 2021
 									span INDUSTRY 4.0 AUTONOMOUS MOBILE ROBOTS
 
-						.PHome-News__news
+						.PHome-News__news.gsap-reveal
 							img(src=require("@assets/images/home_news_2.jpg"), alt="alt")
 							.d-flex.flex-column.gap-2.align-items-center.align-items-sm-start
 								h4
@@ -185,7 +186,7 @@ block body
 									strong MAY 05, 2021
 									span INDUSTRY 4.0 AUTONOMOUS MOBILE ROBOTS
 
-						.PHome-News__news
+						.PHome-News__news.gsap-reveal
 							img(src=require("@assets/images/home_news_3.jpg"), alt="alt")
 							.d-flex.flex-column.gap-2.align-items-center.align-items-sm-start
 								h4

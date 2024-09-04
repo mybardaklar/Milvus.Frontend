@@ -120,6 +120,7 @@
 		background-color: #fff;
 		border-radius: 2.25rem;
 		padding: 1.5rem;
+		transition: 0.2s all;
 
 		&__img {
 			display: flex;
@@ -148,6 +149,10 @@
 			font-family: var(--aa-font-sans-2);
 		}
 	}
+}
+
+section.PHome-Solutions .PHome-Solutions__solution:hover {
+	transform: scale(1.1, 1.1);
 }
 
 .PHome-Monitor {
