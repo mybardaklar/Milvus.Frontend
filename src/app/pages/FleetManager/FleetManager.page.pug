@@ -10,18 +10,18 @@ block header
 block body
 	section.PFleetManager-Hero
 		.container
-			.PFleetManager-Hero__text
+			.PFleetManager-Hero__text.gsap-reveal
 				img(src=require("@assets/images/fleetmanager_hero_text.png"), alt="alt")
-			h1 Lorem ipsum<br>Dolor sit amet consectetur.
+			h1.gsap-reveal(data-delay="0.5") Lorem ipsum<br>Dolor sit amet consectetur.
 
 
 
 
 	section#PProductDetail-Overview.PProductDetail-Detail.PFleetManager-Detail(data-section="PProductDetail-Overview")
 		.container
-			.PFleetManager-Detail__img
+			.PFleetManager-Detail__img.gsap-reveal(data-delay="1")
 				img(src=require("@assets/images/fleetmanager_hero.png"), alt="alt")
-			.PProductDetail-Detail__about
+			.PProductDetail-Detail__about.gsap-reveal
 				p Milvus Fleet Manager is the ultimate way to control your robots from anywhere. All you need is a smart device! Our fleet management software supplies you with all the information you need to operate your fleet with ease. Think of our software as your fleet’s control center. It connects in real time so it will always give you the most up-to-date information.
 
 
@@ -56,14 +56,14 @@ block body
 		.container
 			.row.gy-4
 				.col-lg-8
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Feature 1
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
 
 				.col-lg-4
-					.CGridBlock.CGridBlock--light
+					.CGridBlock.CGridBlock--light.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_2.png"), alt="alt")
 						.CGridBlock__body
@@ -72,13 +72,13 @@ block body
 							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Feature 1
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-4
-					.CGridBlock.CGridBlock--transparent
+					.CGridBlock.CGridBlock--transparent.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_3.png"), alt="alt")
 						.CGridBlock__body
@@ -95,19 +95,19 @@ block body
 							br
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal(data-delay="1")
 						.CGridBlock__body
 							h4 Feature 2
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Feature 3
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-8
-					.CGridBlock.CGridBlock--light
+					.CGridBlock.CGridBlock--light.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_4.png"), alt="alt")
 						.CGridBlock__body
@@ -120,17 +120,17 @@ block body
 
 
 
-	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor")
+	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor").gsap-reveal
 		.container
 			.PHome-Monitor__head
 				h4 Lorem Ipsum
 
 			.row.align-items-center.gy-5.flex-lg-row-reverse
 				.col-lg-6.col-xl-7
-					.PHome-Monitor__img
+					.PHome-Monitor__img.gsap-reveal(data-y="0", data-x="-20")
 						img(src=require("@assets/images/home_monitor.png"), alt="alt")
 				.col-lg-6.col-xl-5
-					.PHome-Monitor__content
+					.PHome-Monitor__content.gsap-reveal(data-y="0", data-x="20", data-delay="0.2")
 						h3 Real-time Fleet Monitoring
 						h5 Stay informed on all aspects of<br>your robotic fleet.
 						p You can track all aspects of your fleet through our easy-to-use interface. When you use the Milvus Fleet Manager dashboards, you can empower different groups to supervise and deploy robots. You can monitor vehicle information, check robot health, and track the flow of materials from any mobile device. Toggle between map and status views so you’re always in the know about your robots and materials.
@@ -142,7 +142,7 @@ block body
 
 	section#PProductDetail-Attachments.PFleetManager-SeamlessIntegration(data-section="PProductDetail-Attachments")
 		.container
-			.PFleetManager-Block
+			.PFleetManager-Block.gsap-reveal
 				.row.g-5.flex-lg-row-reverse
 					.col-lg-6
 						.PFleetManager-Block__img
@@ -160,7 +160,7 @@ block body
 
 	section#PProductDetail-Safety.PFleetManager-CuttingEdge(data-section="PProductDetail-Safety")
 		.container
-			.PFleetManager-Block
+			.PFleetManager-Block.gsap-reveal
 				.row.g-5
 					.col-lg-6
 						.PFleetManager-Block__img
@@ -178,7 +178,7 @@ block body
 
 	section.PFleetManager-Multirobot
 		.container
-			.PFleetManager-Block
+			.PFleetManager-Block.gsap-reveal
 				.row.g-5.flex-lg-row-reverse
 					.col-lg-6
 						.PFleetManager-Block__img
@@ -220,7 +220,7 @@ block body
 			h3 Explore our robots
 			.row.gy-4.mt-3
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_1.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -229,7 +229,7 @@ block body
 							strong Light and Nimble
 							p Unleashes Powerful Performance
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="0.5")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_2.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -238,7 +238,7 @@ block body
 							strong Agility Meets Power
 							p Navigates Tightest Corners
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="1")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_3.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -247,7 +247,7 @@ block body
 							strong Mid-Size Master
 							p Maximizes Workflow Efficiency
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="1.5")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_4.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand

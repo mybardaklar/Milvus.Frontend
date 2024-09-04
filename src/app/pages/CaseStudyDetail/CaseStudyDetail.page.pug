@@ -9,15 +9,15 @@ block header
 
 block body
 	.container
-		section.PCaseStudyDetail-Hero
+		section.PCaseStudyDetail-Hero.gsap-reveal
 			.row.gy-4.flex-lg-row-reverse
 				.col-lg-6
 					img(src=require("@assets/images/blog_1.jpg"), alt="alt")
 				.col-lg-6
 					.PCaseStudyDetail-Hero__body
-						h2 UNILEVER
-						h1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sapien facilisis, ornare elit sit amet, laoreet est. Praesent ultrices metus nibh, non ultrices lectus sagittis ac. Phasellus eu elit nec ipsum sollicitudin eleifend. Aenean ornare eu odio in dapibus. Cras at lorem nulla. Pellentesque sit amet nisi tincidunt turpis semper lobortis sed quis justo.
+						h2.gsap-reveal(data-delay="0.5") UNILEVER
+						h1.gsap-reveal Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+						p.gsap-reveal(data-delay="1") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec sapien facilisis, ornare elit sit amet, laoreet est. Praesent ultrices metus nibh, non ultrices lectus sagittis ac. Phasellus eu elit nec ipsum sollicitudin eleifend. Aenean ornare eu odio in dapibus. Cras at lorem nulla. Pellentesque sit amet nisi tincidunt turpis semper lobortis sed quis justo.
 
 
 
@@ -25,10 +25,10 @@ block body
 	section.PCaseStudyDetail-Who
 		.container
 			.row.gy-4
-				.col-lg-6
+				.col-lg-6.gsap-reveal
 					h4 Who is the company?
 					h3 Unilever is one of the world’s largest companies. With over 400 brands, Unilever manufactures and distributes homecare, personal care, food, and drinks to over 2.5 billion people worldwide.
-				.col-lg-6
+				.col-lg-6.gsap-reveal(data-delay="0.5")
 					p
 						strong Unilever Konya HPC Factory
 					p Unilever Konya HPC Factory is one of the biggest green manufacturing factories in the world. At over €150 million, building this factory in Konya, Turkey was one of Unilever’s largest investments of the last decade.
@@ -42,13 +42,13 @@ block body
 
 	section.PCaseStudyDetail-Challanges
 		.container
-			.PCaseStudyDetail-Challanges__head
+			.PCaseStudyDetail-Challanges__head.gsap-reveal
 				h4 Challanges
 				h3 Comprehensive Range of Automation Solutions
 
 			.row.gy-4.flex-lg-row-reverse
 				.col-lg-6
-					.PCaseStudyDetail-Challanges__slider
+					.PCaseStudyDetail-Challanges__slider.gsap-reveal
 						.swiper(id="PCaseStudyDetail-Challanges__Slider")
 							.swiper-wrapper
 								.swiper-slide
@@ -62,7 +62,7 @@ block body
 							.swiper-pagination
 
 				.col-lg-6
-					.PCaseStudyDetail-Challanges__body
+					.PCaseStudyDetail-Challanges__body.gsap-reveal(data-delay="0.5")
 						p The challenge here was to deliver raw material from the warehouse area to the production area, deliver pallets, and transport waste materials. The Unilever Konya HPC Factory utilized long milk runs that led to safety issues, time loss, labor costs, mistakes, and more. With four different material types needing to be transported twenty-four hours nonstop for over 100 distribution points, it was a complex issue requiring a sophisticated solution.
 						p The first challenge was the inefficiency of the milk runs travelling through the production area. In this case, the milk run method took up too much space and led to many problems. It posed safety concerns to the workers on the floor and caused a crowded workspace with limited clearance of machines and equipment, narrow paths, and several turns. A high level of dependence on manual labor posed yet another problem. With a high driving workload of milk run drivers, the labor cost was becoming unsustainable.
 						p And, another issue that Unilever Konya HPC Factory faced was a mass of materials in the production area, disorderly buffer, and high buffer size. With multiple milk run in the same area, it was easy to become disorganized and make stocking mistakes.
@@ -78,10 +78,10 @@ block body
 
 			.row.gy-4.flex-lg-row-reverse
 				.col-lg-6
-					.PCaseStudyDetail-Solution__img
+					.PCaseStudyDetail-Solution__img.gsap-reveal(data-y="0", data-x="-20")
 						img(src=require("@assets/images/casestudydetail_solution.jpg"), alt="alt")
 				.col-lg-6
-					.d-flex.flex-column.gap-5
+					.d-flex.flex-column.gap-5.gsap-reveal(data-y="0", data-x="20", data-delay="0.2")
 						h3 Lorem ipsum dolor sit amet
 						h6 The aim was to eliminate unproductive, cost-ineffective and unsafe operation flow, replacing them with fully autonomous, safest and the most flexible internal transport.
 						p Autonomous mobile robots allow for a safer environment with no forklifts and no human workers needed to transport the material between locations. To maximize safety and efficiency while transporting materials between the warehouse and the production floor, a detailed engineering study was conducted to determine true robot and attachment selection, proper station and flow structure. Milvus Robotics then designed attachments to perfectly fit to the robot structure and ensured maximum reliability, safety and synchronization together with the robot. After deployment, we continue to provide superior maintenance and support to keep the mobile robots running around the clock.
@@ -89,7 +89,7 @@ block body
 
 
 
-	section.PCaseStudyDetail-Video
+	section.PCaseStudyDetail-Video.gsap-reveal
 		.container
 			.row.gy-4
 				.col-12
@@ -104,7 +104,7 @@ block body
 
 
 
-	section.PCaseStudyDetail-Roots
+	section.PCaseStudyDetail-Roots.gsap-reveal
 		.container
 			.PCaseStudyDetail-Roots__head
 				.row
@@ -159,12 +159,12 @@ block body
 		.container
 			.row.gy-4
 				.col-lg-9
-					.PCaseStudyDetail-Deployment__head
+					.PCaseStudyDetail-Deployment__head.gsap-reveal
 						h3 Deployment and Continuous Support
 						p Onsite implementation and training was conducted efficiently with succinct in-person training sessions. Our AMRs are designed for simplified operation, allowing for a short training period. The Milvus Robotics support team provides remote monitoring and control at all times, as well as high-level continuous support. If issues arise, we provide backward mission flow analysis, allowing the support team to access detailed log files for troubleshooting.
 
 				.col-lg-9
-					.CGridBlock.PCaseStudyDetail-Deployment__block
+					.CGridBlock.PCaseStudyDetail-Deployment__block.gsap-reveal
 						.CGridBlock__body
 							p We were impressed with the level of detail put into the engineering study! Milvus approached this project with our needs in mind and offered customizations that allowed for full and total automation in our factory. They did not just provide a general solution. They were always incredibly punctual and communicative. With our input and constant back-and-forth communication, as well as their open mind to new ideas and requests, a completely custom solution was reached.
 							.mt-3
@@ -174,10 +174,10 @@ block body
 				.col-lg-3
 					.row.gy-4
 						.col-sm-6.col-lg-12
-							.PCaseStudyDetail-Deployment__block
+							.PCaseStudyDetail-Deployment__block.gsap-reveal
 								img(src=require("@assets/images/casestudydetail_feature-1.png"), alt="alt")
 						.col-sm-6.col-lg-12
-							.PCaseStudyDetail-Deployment__block
+							.PCaseStudyDetail-Deployment__block.gsap-reveal
 								img(src=require("@assets/images/casestudydetail_feature-2.png"), alt="alt")
 
 
@@ -187,39 +187,39 @@ block body
 		.container
 			.row.gy-4
 				.col-lg-4
-					.PCaseStudyDetail-Results__head
+					.PCaseStudyDetail-Results__head.gsap-reveal
 						h3 The results
 						p 17 robots are currently being used at Unilever Konya HPC Factory, operating twenty-four hours nonstop and with no defects for more than a year. They have improved productivity and allowed for a safer environment while keeping costs down.
 
 				.col-lg-8
 					.row.gy-4
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal
 								span WORKED
 								strong 7.180 hours
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal(data-delay="0.5")
 								span ACCIDENTS
 								strong None
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal
 								span CARRIED
 								strong 68.700 ton
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal(data-delay="0.5")
 								span TRAVELLED
 								strong 78.600 km
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal
 								span PRODUCTIVITY INCREASE
 								strong 18%
 						.col-sm-6
-							.PCaseStudyDetail-Results__result
+							.PCaseStudyDetail-Results__result.gsap-reveal(data-delay="0.5")
 								span COMPLETED
 								strong 235.000 cycle
 
 				.col-12
-					img.w-100(src=require("@assets/images/results.png"), alt="alt")
+					img.gsap-reveal.w-100(src=require("@assets/images/results.png"), alt="alt")
 
 
 
@@ -229,7 +229,7 @@ block body
 			.PCaseStudyDetail-Other__head Other Case Studies
 			.row.gy-4
 				.col-lg-4
-					.PCaseStudy-Posts__post
+					.PCaseStudy-Posts__post.gsap-reveal
 						.PCaseStudy-Posts__post__img
 							a(href="#")
 								img(src=require("@assets/images/blog_1.jpg"), alt="alt")
@@ -240,7 +240,7 @@ block body
 							p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
 
 				.col-lg-4
-					.PCaseStudy-Posts__post
+					.PCaseStudy-Posts__post.gsap-reveal(data-delay="0.5")
 						.PCaseStudy-Posts__post__img
 							a(href="#")
 								img(src=require("@assets/images/blog_2.jpg"), alt="alt")
@@ -251,7 +251,7 @@ block body
 							p One of the most appealing features of AMRs is their ability to complete various different tasks and navigate virtually any environment. They are flexible and adaptable.
 
 				.col-lg-4
-					.PCaseStudy-Posts__post
+					.PCaseStudy-Posts__post.gsap-reveal(data-delay="1")
 						.PCaseStudy-Posts__post__img
 							a(href="#")
 								img(src=require("@assets/images/blog_2.jpg"), alt="alt")

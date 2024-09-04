@@ -10,14 +10,14 @@ block body
 			img(src=require("@assets/images/productdetail_hero.jpg"), alt="alt")
 		.PProductDetail-Hero__body
 			.container
-				img(src=require("@assets/images/productdetail_logo.png"), alt="alt")
-				h1 Mid-Size Master,<br>Maximizes Workflow Efficiency
+				img(src=require("@assets/images/productdetail_logo.png"), alt="alt").gsap-reveal
+				h1.gsap-reveal(data-delay="0.5") Mid-Size Master,<br>Maximizes Workflow Efficiency
 
 
 
 	section#PProductDetail-Overview.PProductDetail-Detail(data-section="PProductDetail-Overview")
 		.container
-			.PProductDetail-Detail__about
+			.PProductDetail-Detail__about.gsap-reveal
 				p Revolutionize your material handling tasks with our comprehensive suite of autonomous mobile robots (AMRs). Capable of safely maneuvering and transporting payloads up to 2000 kg, our AMRs are offered with a range of attachments to suit various application needs. Opt for AMRs to significantly cut costs and enhance operational efficiency.
 				hr
 				ul
@@ -85,7 +85,7 @@ block body
 		.container
 			.row.gy-4
 				.col-lg-8
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_1.png"), alt="alt")
 						.CGridBlock__body
@@ -94,7 +94,7 @@ block body
 							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 18L5 16.6L14.6 7H6V5h12v12h-2V8.4z"/></svg>
 
 				.col-lg-4
-					.CGridBlock.CGridBlock--light
+					.CGridBlock.CGridBlock--light.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_2.png"), alt="alt")
 						.CGridBlock__body
@@ -103,13 +103,13 @@ block body
 							<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 24 24"><path fill="currentColor" d="M11 13H6q-.425 0-.712-.288T5 12t.288-.712T6 11h5V6q0-.425.288-.712T12 5t.713.288T13 6v5h5q.425 0 .713.288T19 12t-.288.713T18 13h-5v5q0 .425-.288.713T12 19t-.712-.288T11 18z"/></svg>
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Feature 1
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-4
-					.CGridBlock.CGridBlock--transparent
+					.CGridBlock.CGridBlock--transparent.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_3.png"), alt="alt")
 						.CGridBlock__body
@@ -126,19 +126,19 @@ block body
 							br
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal.gsap-reveal(data-delay="1.0")
 						.CGridBlock__body
 							h4 Feature 2
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Feature 3
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id venenatis tortor, nec vestibulum quam. Nullam tempus in sem vel aliquet.
 
 				.col-lg-8
-					.CGridBlock.CGridBlock--light
+					.CGridBlock.CGridBlock--light.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/feature_4.png"), alt="alt")
 						.CGridBlock__body
@@ -151,17 +151,17 @@ block body
 
 
 
-	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor")
+	section#PProductDetail-Monitor.PHome-Monitor(data-section="PProductDetail-Monitor").gsap-reveal
 		.container
 			.PHome-Monitor__head
 				h4 Milvus Fleet Manager
 
 			.row.align-items-center.gy-5.flex-lg-row-reverse
 				.col-lg-6.col-xl-7
-					.PHome-Monitor__img
+					.PHome-Monitor__img.gsap-reveal(data-y="0", data-x="-20")
 						img(src=require("@assets/images/home_monitor.png"), alt="alt")
 				.col-lg-6.col-xl-5
-					.PHome-Monitor__content
+					.PHome-Monitor__content.gsap-reveal(data-y="0", data-x="20", data-delay="0.5")
 						h3 Effortlessly manage and monitor your fleet anytime, anywhere.
 						a.a-button(href="#") Discover
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
@@ -170,7 +170,7 @@ block body
 
 
 
-	section#PProductDetail-Attachments.PProductDetail-Attachments(data-section="PProductDetail-Attachments")
+	section#PProductDetail-Attachments.PProductDetail-Attachments(data-section="PProductDetail-Attachments").gsap-reveal
 		.PProductDetail-Attachments__head
 			.container
 				.row.gy-5.align-items-end
@@ -228,7 +228,7 @@ block body
 
 
 
-	section#PProductDetail-Safety.PProductDetail-Safety(data-section="PProductDetail-Safety")
+	section#PProductDetail-Safety.PProductDetail-Safety(data-section="PProductDetail-Safety").gsap-reveal
 		.container
 			.PProductDetail-Safety__head
 				h4 Safety
@@ -275,12 +275,12 @@ block body
 
 
 
-	section.PProductDetail-Explore
+	section.PProductDetail-Explore.gsap-reveal
 		.container
 			h3 Explore the rest of the fleet
 			.row.gy-4.mt-3
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_1.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -289,7 +289,7 @@ block body
 							strong Light and Nimble
 							p Unleashes Powerful Performance
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="0.5")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_2.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -298,7 +298,7 @@ block body
 							strong Agility Meets Power
 							p Navigates Tightest Corners
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="1")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_3.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand
@@ -307,7 +307,7 @@ block body
 							strong Mid-Size Master
 							p Maximizes Workflow Efficiency
 				.col-sm-6.col-xl-3
-					.PHome-Solutions__solution
+					.PHome-Solutions__solution.gsap-reveal(data-delay="1.5")
 						.PHome-Solutions__solution__img
 							img(src=require("@assets/images/header_product_4.png"), width="180", alt="alt")
 						span.PHome-Solutions__solution__brand

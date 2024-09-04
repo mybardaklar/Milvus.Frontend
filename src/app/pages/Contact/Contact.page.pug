@@ -13,13 +13,13 @@ block footer
 block body
 	.PContact
 		section.PContact-Head
-			.container
+			.container.gsap-reveal
 				h1 Lorem ipsum dolor sit amet
 
 		.container
 			.row.gy-4
 				.col-lg-4
-					.PContact-Block
+					.PContact-Block.gsap-reveal(data-delay="0.5")
 						.PContact-Block__head
 							h4 Mail us
 							.me-auto
@@ -36,7 +36,7 @@ block body
 									strong Human Resources
 									span hr@milvusrobotics.com
 					br
-					.PContact-Block
+					.PContact-Block.gsap-reveal(data-delay=".75")
 						.PContact-Block__head
 							h4 Call us
 							.me-auto
@@ -49,7 +49,7 @@ block body
 									strong +90 312 227 0235
 
 				.col-lg-8
-					.PContact-Block
+					.PContact-Block.gsap-reveal(data-delay="1")
 						.PContact-Block__head
 							h4 Get in touch
 						.PContact-Block__body
@@ -73,20 +73,20 @@ block body
 
 
 
-	section.PContact-Map
+	section.PContact-Map.gsap-reveal
 		.container
 			h3 Global Offices and Facilities
 			img(src=require("@assets/images/contact_map.png"), alt="alt")
 			.row.gy-4.mt-2
 				.col-lg-4
-					.PContact-Map__item
+					.PContact-Map__item.gsap-reveal
 						strong US
 						p 3800 Camp Creek Pkwy SW<br>Bldg 1400-116 #1063<br>Atlanta, Georgia 30331
 				.col-lg-4
-					.PContact-Map__item
+					.PContact-Map__item.gsap-reveal(data-delay="0.5")
 						strong TR
 						p Yeni Bağlıca Mah. Türkeli Cad.<br>No:11/1 06790 Etimesgut<br>Ankara / Turkey
 				.col-lg-4
-					.PContact-Map__item
+					.PContact-Map__item.gsap-reveal(data-delay="1")
 						strong TR
 						p ODTU Teknokent MET B Blok<br>No:280/15 06520<br>Ankara / Turkey

@@ -13,14 +13,14 @@ block body
 			.PBlogDetail-Hero__img
 				img(src=require("@assets/images/blogdetail_hero.jpg"), alt="alt")
 			.PBlogDetail-Hero__body
-				time MAY 05, 2021
-				h1 12 ways companies are automating workflows with mobile robots
-				h6 Industry 4.0, Autonomous Mobile Robots
+				time.gsap-reveal(data-delay="0.5") MAY 05, 2021
+				h1.gsap-reveal 12 ways companies are automating workflows with mobile robots
+				h6.gsap-reveal(data-delay="1") Industry 4.0, Autonomous Mobile Robots
 
 	section.PBlogDetail-Main
 		.container
 			.row.gy-4
-				.col-lg-4
+				.col-lg-4.gsap-reveal(data-delay="0.5")
 					aside.PBlogDetail-Sidebar
 						.PBlogDetail-Sidebar__wrapper
 							h2 12 ways companies are automating workflows with mobile robots
@@ -42,7 +42,7 @@ block body
 								li
 									a(href="#") The Milvus Robotics Difference
 
-				.col-lg-8
+				.col-lg-8.gsap-reveal(data-delay="1")
 					.PBlogDetail-Content
 						p With a decade of experience, Milvus Robotics is a leading provider of autonomous mobile robots (AMRs). Milvus Robotics’ SEIT AMRs have been deployed all over the globe, and there’s an ever-growing catalog of robots and attachments designed to meet precise needs across multiple industries.
 						p In recent years, many new AMR providers have entered the market claiming to have products similar to the AMRs developed by Milvus Robotics. However, there are several key differences between the average competitor’s AMRs and Milvus Robotics’ SEIT AMRs, including:
@@ -89,13 +89,13 @@ block body
 
 
 
-	section.PBlogDetail-Related
+	section.PBlogDetail-Related.gsap-reveal
 		.container
 			h4 Related Contents
 			.row.gy-4
 				- let n = 1;
 				while n <= 3
-					.col-lg-4
+					.col-lg-4.gsap-reveal(data-delay= (n-1) * 0.5)
 						.PBlog-Posts__post
 							.PBlog-Posts__post__img
 								a(href="#")

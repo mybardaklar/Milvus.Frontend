@@ -13,11 +13,11 @@ block body
 			.PCareers-Hero__img
 				img(src=require("@assets/images/careers_hero.jpg"), alt="alt")
 			.PCareers-Hero__body
-				h1 Innovators Wanted to<br>Elevate Robotics Positions!
-				p Milvus Robotics is looking for bright minds who aren’t afraid to think outside the box.The world of robotics is fast-paced and exciting. You never know what a workday may hold for you, but you know you won’t get bored!
+				h1.gsap-reveal Innovators Wanted to<br>Elevate Robotics Positions!
+				p.gsap-reveal(data-delay="0.5") Milvus Robotics is looking for bright minds who aren’t afraid to think outside the box.The world of robotics is fast-paced and exciting. You never know what a workday may hold for you, but you know you won’t get bored!
 				.PCareers-Hero__links
-					a(href="/") Open Positions
-					a(href="/") Find Out More
+					a(href="/").gsap-reveal(data-delay="1") Open Positions
+					a(href="/").gsap-reveal(data-delay="1.5") Find Out More
 
 
 
@@ -25,9 +25,9 @@ block body
 	section.PCareers-Working
 		.container
 			.row.g-5.flex-lg-row-reverse
-				.col-lg-6
+				.col-lg-6.gsap-reveal
 					img(src=require("@assets/images/careers_working.jpg"), alt="alt")
-				.col-lg-6
+				.col-lg-6.gsap-reveal(data-delay="0.5")
 					h3 Working at<br>Milvus Robotics
 					.PCareers-Working__block
 						p When you work at Milvus Robotics, you are contributing to a company that proudly designs and develops some of the most innovative and powerful Autonomous Mobile Robots in the world.
@@ -40,10 +40,10 @@ block body
 	section.PHome-Monitor.PCareers-Monitor
 		.container
 			.row.gy-5.flex-lg-row-reverse
-				.col-lg-6
+				.col-lg-6.gsap-reveal(data-delay="0.5")
 					.PHome-Monitor__img
 						img(src=require("@assets/images/careers_culture.jpg"), alt="alt")
-				.col-lg-6
+				.col-lg-6.gsap-reveal
 					.PHome-Monitor__content
 						h3 Culture and Values
 						p We take an experimental approach to our work. To produce cutting-edge results, we believe that employees must be given the space to exercise their most creative, unique ideas. Sometimes these ideas may not work out, but it’s all part of the process. We give employees constructive, helpful feedback so they can continue to grow.
@@ -60,7 +60,7 @@ block body
 
 			.row.g-5
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Health Benefits
 							p Lorem ipsum dolor sit amet, consectetur
@@ -68,7 +68,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_1.png"), alt="alt")
 
 				.col-lg-8
-					.CGridBlock.CGridBlock--light
+					.CGridBlock.CGridBlock--light.gsap-reveal(data-delay="0.5")
 						.CGridBlock__img
 							img(src=require("@assets/images/careers_benefits_bg_1.jpg"), alt="alt")
 						.CGridBlock__body
@@ -78,7 +78,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_2.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__body
 							h4 Health Benefits
 							p Lorem ipsum dolor sit amet, consectetur.
@@ -86,7 +86,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_1.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal(data-delay="0.5")
 						.CGridBlock__body
 							h4 Delicious & Nutritious snacks
 							p Lorem ipsum dolor sit amet, consectetur.
@@ -94,7 +94,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_3.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock.CGridBlock--dark
+					.CGridBlock.CGridBlock--dark.gsap-reveal(data-delay="1")
 						.CGridBlock__body
 							h4 Employees first
 							p Lorem ipsum dolor sit amet, consectetu.
@@ -102,7 +102,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_4.png"), alt="alt")
 
 				.col-lg-8
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__img
 							img(src=require("@assets/images/careers_benefits_bg_2.jpg"), alt="alt")
 						.CGridBlock__body
@@ -112,7 +112,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_5.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal(data-delay="0.5")
 						.CGridBlock__body
 							h4 Travel opportunities
 							p Lorem ipsum dolor sit amet, consectetu.
@@ -120,7 +120,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_6.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal
 						.CGridBlock__img
 							img(src=require("@assets/images/careers_benefits_bg_3.svg"), alt="alt")
 						.CGridBlock__body
@@ -130,7 +130,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_7.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal(data-delay="0.5")
 						.CGridBlock__body
 							h4 Educational Conferences
 							p Lorem ipsum dolor sit amet, consecte.
@@ -138,7 +138,7 @@ block body
 							img.mt-4(src=require("@assets/images/careers_benefits_8.png"), alt="alt")
 
 				.col-lg-4
-					.CGridBlock
+					.CGridBlock.gsap-reveal(data-delay="1")
 						.CGridBlock__body
 							h4 High-quality coffee
 							p Lorem ipsum dolor sit amet, consectet.
@@ -148,7 +148,7 @@ block body
 
 
 
-	section.PCareers-Departments
+	section.PCareers-Departments.gsap-reveal
 		.container
 			h3 Departments
 			.row.justify-content-between.gy-4(x-data="{ activeTab: 0 }")
@@ -189,7 +189,7 @@ block body
 						.me-auto
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
 
-				.col-lg-6
+				.col-lg-6.gsap-reveal(data-delay="0.5")
 					div(x-show="activeTab === 0")
 						img(src=require("@assets/images/careers_departments.png"), alt="alt")
 						p Employees are responsible for creating advanced solutions to the mechanical and electrical complexities of robot development.
@@ -211,9 +211,9 @@ block body
 
 	section.PCareers-Succeed
 		.container
-			h3 When they succeed, <strong>we succeed!</strong>
-			h4 To be the global leader in robotics,<br>we need the best of the best for employees.
-			span Samil Ozden, CEO & Co-founder
+			h3.gsap-reveal(data-delay="0.5") When they succeed, <strong>we succeed!</strong>
+			h4.gsap-reveal(data-delay="1") To be the global leader in robotics,<br>we need the best of the best for employees.
+			span.gsap-reveal(data-delay="1.5") Samil Ozden, CEO & Co-founder
 
 
 
@@ -222,26 +222,26 @@ block body
 		.container
 			.row.g-5
 				.col-lg-4
-					.PCareers-Programs__head
+					.PCareers-Programs__head.gsap-reveal
 						h3 Programs for<br>Current Students<br>and New Graduates
 						p At Milvus Robotics, we want to prepare students to be valuable contributors in the workplace tomorrow. Our programs for students and recent graduates give young people valuable insight into our industry and help prepare them for fulfilling careers. We do it all in a rich learning environment full of practical experience and the brightest minds in robotics.
 
 				.col-lg-8
-					.PCareers-Programs__program
+					.PCareers-Programs__program.gsap-reveal
 						.row.align-items-center.gy-4
 							.col-lg-4
 								strong Internships
 							.col-lg-8
 								p Our internships range from eight to twelve weeks and provide every intern with invaluable real-world experience in their field of choice. Recent graduates will also have the option of a program specially designed for them.
 
-					.PCareers-Programs__program
+					.PCareers-Programs__program.gsap-reveal
 						.row.align-items-center.gy-4
 							.col-lg-4
 								strong Part-Time<br>Jobs
 							.col-lg-8
 								p We provide flexible part-time jobs for students wanting to work 10 to 20 hours a week.
 
-					.PCareers-Programs__program
+					.PCareers-Programs__program.gsap-reveal
 						.row.align-items-center.gy-4
 							.col-lg-4
 								strong Thesis<br>Program
@@ -251,21 +251,21 @@ block body
 
 
 
-	section.PCareers-Careers
+	section.PCareers-Careers.gsap-reveal
 		.container
 			.row.gy-4
 				.col-lg-4
-					.PCareers-Careers__block
+					.PCareers-Careers__block.gsap-reveal
 						h3 Job<br>Openings
 						p Here are the open robotics positions we currently have at Milvus. Check them out to see where your skills fit and how you can contribute to our company.
-					.PCareers-Careers__block.PCareers-Careers__block--light
+					.PCareers-Careers__block.PCareers-Careers__block--light.gsap-reveal
 						h3 Not seeing<br>what you’re<br>looking for<br>right now?
 						p Milvus Robotics is happy to accept unsolicited applications. Use the link below to submit your resume and we will keep you in mind for future openings.
 						a.a-button(href="#") Submit Resume
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
 
 				.col-lg-8
-					.PCareers-Jobs(x-data="{ activeTab: 0 }")
+					.PCareers-Jobs(x-data="{ activeTab: 0 }").gsap-reveal(data-delay="0.5")
 						.PCareers-Jobs__tabs
 							button(
 								x-on:click.prevent="activeTab = 0",
@@ -350,7 +350,7 @@ block body
 
 
 
-	section.PCareers-Process
+	section.PCareers-Process.gsap-reveal
 		.container
 			.PCareers-Process__head
 				.row
@@ -361,25 +361,25 @@ block body
 			.PCareers-Process__process
 				.row.gy-4
 					.col-sm-6.col-lg-2
-						strong 1
-						p You submit your application.
+						strong.flip-on-scroll 1
+						p.gsap-reveal You submit your application.
 
 					.col-sm-6.col-lg-2
-						strong 2
-						p We call or email you to schedule an interview.
+						strong.flip-on-scroll 2
+						p.gsap-reveal(data-delay="0.2") We call or email you to schedule an interview.
 
 					.col-sm-6.col-lg-2
-						strong 3
-						p We interview you for the first time.
+						strong.flip-on-scroll 3
+						p.gsap-reveal(data-delay="0.4") We interview you for the first time.
 
 					.col-sm-6.col-lg-2
-						strong 4
-						p You complete an assessment.
+						strong.flip-on-scroll 4
+						p.gsap-reveal(data-delay="0.6") You complete an assessment.
 
 					.col-sm-6.col-lg-2
-						strong 5
-						p You meet your future team and complete your final interview.
+						strong.flip-on-scroll 5
+						p.gsap-reveal(data-delay="0.8") You meet your future team and complete your final interview.
 
 					.col-sm-6.col-lg-2
-						strong 6
-						p We offer you your dream job!
+						strong.flip-on-scroll 6
+						p.gsap-reveal(data-delay="1") We offer you your dream job!
